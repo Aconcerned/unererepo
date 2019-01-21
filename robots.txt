@@ -1,0 +1,40 @@
+Sitemap: 
+
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Mediapartners-Google
+Disallow: /
+
+User-agent: Yahoo! Slurp
+Disallow: /
+
+User-agent: bingbot
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: IPS-Agent
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
+
+User-agent: coccocbot
+Disallow: /
+
+User-agent: 13TABS
+Disallow: /
+
+User-agent: *
+Disallow: /
