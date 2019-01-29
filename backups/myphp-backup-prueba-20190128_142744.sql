@@ -78,6 +78,30 @@ INSERT INTO `reservalib` VALUES ("2","ova","oba","2018-11-22","12:00:00","13:00:
 
 
 
+DROP TABLE IF EXISTS `reservatodo`;
+
+CREATE TABLE `reservatodo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) NOT NULL,
+  `materia` varchar(100) NOT NULL,
+  `salon` varchar(100) NOT NULL,
+  `fecha` varchar(100) NOT NULL,
+  `fechaemp` time NOT NULL,
+  `fechater` time NOT NULL,
+  `numero` int(11) NOT NULL,
+  `fechainscripcion` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+INSERT INTO `reservatodo` VALUES ("2","ooo","eee","CDT","2019-01-24","12:00:00","13:00:00","2","2019-01-24"),
+("4","opo","oppa","diseno","2019-01-29","13:00:00","14:00:00","3","2019-01-24"),
+("5","ono","ona","CDT","2019-01-25","10:00:00","12:00:00","2","2019-01-24"),
+("8","tup","top","biblioteca","2019-01-24","09:00:00","10:00:00","3","2019-01-24"),
+("9","uru","ogro","aula_virtual","2019-01-24","12:00:00","13:00:00","3","2019-01-24"),
+("10","gokdari","ere","CDT","2019-01-29","12:00:00","13:00:00","2","2019-01-28");
+
+
+
 DROP TABLE IF EXISTS `usuarios`;
 
 CREATE TABLE `usuarios` (
@@ -88,7 +112,7 @@ CREATE TABLE `usuarios` (
   `cedula` int(11) NOT NULL,
   `Cargo` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 INSERT INTO `usuarios` VALUES ("1","gokdari","ae4173ada576e1a595e1ef731aae977f","soisoisoi@gmail.com","760","1"),
 ("2","aaa","47bce5c74f589f4867dbd57e9ca9f808","iamgod@gmail.com","1789","2"),
@@ -101,4 +125,5 @@ INSERT INTO `usuarios` VALUES ("1","gokdari","ae4173ada576e1a595e1ef731aae977f",
 ("9","no","7fa3b767c460b54a2be4d49030b349c7","jesusenrique1996@gmail.com","232","2"),
 ("10","re","12eccbdd9b32918131341f38907cbbb5","jesusenrique1996@gmail.com","3412","1"),
 ("11","gamzee","5b4464cffe8f5607811c5ac5ec35df7c","dogdie3001@gmail.com","66666","1"),
-("12","ereoi","8721331b3aaa9770e320c00cddf22119","dogdie3001@gmail.com","45123","2");
+("12","ereoi","8721331b3aaa9770e320c00cddf22119","dogdie3001@gmail.com","45123","2"),
+("13","oro","a13314e5b7614acf77e65427af6d3791","dogdie3001@gmail.com","11123341","2");

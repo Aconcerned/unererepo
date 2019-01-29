@@ -14,10 +14,11 @@ CREATE TABLE `reservaaula` (
   `numero` int(11) NOT NULL,
   `fechainscripcion` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 INSERT INTO `reservaaula` VALUES ("2","boi","bertu","2018-11-30","09:00:00","10:00:00","2","2018-10-31"),
-("3","bebe","ru","2018-12-01","16:00:00","17:00:00","3","2018-10-31");
+("3","bebe","ru","2018-12-01","16:00:00","17:00:00","3","2018-10-31"),
+("4","yanni","yanni capuzzi","2018-11-22","12:00:00","13:00:00","2","2018-11-22");
 
 
 
@@ -35,7 +36,7 @@ CREATE TABLE `reservacdt` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
-INSERT INTO `reservacdt` VALUES ("1","mario","nut","2018-12-12","09:00:00","12:00:00","3","2018-09-23"),
+INSERT INTO `reservacdt` VALUES ("1","mario","nut","2018-12-12","09:00:00","12:00:00","2","2018-09-23"),
 ("5","boi","art","2018-11-12","11:11:00","12:12:00","2","2018-10-31");
 
 
@@ -54,8 +55,7 @@ CREATE TABLE `reservadiseno` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
-INSERT INTO `reservadiseno` VALUES ("3","yui","asi","2018-10-31","12:00:00","13:00:00","2","2018-10-31"),
-("4","sss","ytr","2018-11-01","15:00:00","16:00:00","2","2018-10-31");
+INSERT INTO `reservadiseno` VALUES ("3","yui","asi","2018-10-31","12:00:00","13:00:00","2","2018-10-31");
 
 
 
@@ -88,7 +88,7 @@ CREATE TABLE `usuarios` (
   `cedula` int(11) NOT NULL,
   `Cargo` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 INSERT INTO `usuarios` VALUES ("1","gokdari","ae4173ada576e1a595e1ef731aae977f","soisoisoi@gmail.com","760","1"),
 ("2","aaa","47bce5c74f589f4867dbd57e9ca9f808","iamgod@gmail.com","1789","2"),
@@ -101,4 +101,5 @@ INSERT INTO `usuarios` VALUES ("1","gokdari","ae4173ada576e1a595e1ef731aae977f",
 ("9","no","7fa3b767c460b54a2be4d49030b349c7","jesusenrique1996@gmail.com","232","2"),
 ("10","re","12eccbdd9b32918131341f38907cbbb5","jesusenrique1996@gmail.com","3412","1"),
 ("11","gamzee","5b4464cffe8f5607811c5ac5ec35df7c","dogdie3001@gmail.com","66666","1"),
-("12","ereoi","8721331b3aaa9770e320c00cddf22119","dogdie3001@gmail.com","45123","2");
+("12","ereoi","8721331b3aaa9770e320c00cddf22119","dogdie3001@gmail.com","45123","2"),
+("13","YANNI CAPUZZI","add813b9497d32cf8f3c875bd831710a","ycapuzzi@gmail.com","9967613","1");
