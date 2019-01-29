@@ -5,17 +5,7 @@
 <link rel="stylesheet" href="estilos\registrar.css">
 
 <style>
-#caplock{
-    display: none;   
-    margin: 5px;
-}
-
-body{background-image: url("imagenes/fondo_une.jpg")}
-
-form{
-    padding: 12px;
-    margin: 0px
-}
+#caplock{display:none;margin:5px}body{background-image:url(imagenes/fondo_une.jpg)}form{padding:12px;margin:0}
 
 </style>
 

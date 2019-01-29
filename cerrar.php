@@ -12,5 +12,5 @@
 	session_destroy();
 	session_start();
 	$_SESSION['Cargo']='';
-	header("Location: reservarsalon.php");
+	header("Location: index.php");
 ?>

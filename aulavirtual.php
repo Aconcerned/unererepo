@@ -1,8 +1,11 @@
 <?php include('nuevaaulavirtual.php') ?>
 <?php
 //Archivo de conexion 
+session_start();
+$_SESSION['nombre'];
+
 include_once("connection.php");
-$sql = "SELECT * FROM `reservaaula` limit 10 ";
+$sql = "SELECT * FROM `reservatodo` WHERE salon='aula_virtual' limit 10 ";
 $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 ?>
 
@@ -14,9 +17,7 @@ $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 <link rel="stylesheet" href="estilos\clase.css"> <!-- css de la tabla -->
 
 <style>
-body{
-background-image: url("imagenes/fondo_une.jpg")
-}
+body{background-image:url(imagenes/fondo_une.jpg)}
 </style>
 
 <center><h1>Hacer reservaciones para el Aula Virtual</h1></center>
@@ -40,7 +41,7 @@ background-image: url("imagenes/fondo_une.jpg")
 <form method="POST" action ="aulavirtual.php"/> <!-- El formulario en si -->
 <?php include('errors.php'); ?>
     <label for="nom"><b>Nombre del profesor:</b></label>
-    <input type="text" placeholder="Escriba el nombre del profesor" name="nombre" id ="nombre"<?php echo $nombre; ?> ></input>
+    <input type="text" readonly="readonly" value="<?php echo htmlentities($_SESSION['nombre']); ?>" placeholder="Escriba el nombre del profesor" name="nombre" id ="nombre"<?php echo $nombre; ?> ></input>
 
     <label for="mat"><b>Materia que da:</b></label>
     <input type="text" placeholder="Escriba la materia del profesor" name="materia" id ="materia"<?php echo $materia; ?> ></input>
@@ -57,10 +58,13 @@ background-image: url("imagenes/fondo_une.jpg")
 	<label for="num"><b>Número de computadores a usar (Máximo 6):</b></label>
 	<input type="number" placeholder="Escriba el numero de pcs a usar" min="1" max="6" name="numero" id ="numero"<?php echo $numero; ?>></input>
 	
-	<input type="submit" id="submit" name="submit" value="Crear clase"></input>
+    <div style="text-align: center">
+	<input type="submit" aling="center" id="submit" name="submit" value="Crear clase"></input>
+    </div>
 
-	<div class="container" style="background-color:#f1f1f1">
+	<div style="text-align: center" class="container" aling="center" style="background-color:#f1f1f1">
     <button type="Reset" class="floated">Limpiar campos</button>
+    </div>
     </div>	
 </div>
 
@@ -74,7 +78,7 @@ background-image: url("imagenes/fondo_une.jpg")
          <th>Fecha de inicio</th>
 		 <th>Hora que empieza</th>
 		 <th>Hora que termina</th>
-		 <th>Número de maquinas a usar</th>
+		 <th>Número de máquinas a usar</th>
 		 <th>Fecha de inscripción</th>
       </tr>
    </thead>

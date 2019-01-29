@@ -39,10 +39,10 @@ if (isset($_POST['submit'])) {
 	  array_push($errors, "Las horas son iguales, cambielas");
   }
   
-  //Si no hay errores, hace el insertar
+    //Si no hay errores, hace el insertar
   if (count($errors) == 0) {
-  	$query = "INSERT INTO reservalib(nombre, materia, fecha, fechaemp, fechater, numero, fechainscripcion) 
-  			  VALUES('$nombre', '$materia', '$fecha', '$fechaemp', '$fechater', '$numero', now())";
+  	$query = "INSERT INTO reservatodo(nombre, materia, salon, fecha, fechaemp, fechater, numero, fechainscripcion) 
+  			  VALUES('$nombre', '$materia', 'biblioteca', '$fecha', '$fechaemp', '$fechater', '$numero', now())";
   	mysqli_query($db, $query);
 	echo $res;
   }

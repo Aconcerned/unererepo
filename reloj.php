@@ -4,10 +4,8 @@
 
 <link rel="stylesheet" href="estilos\menor.css"> <!-- css de la forma -->
 
-<style>
-        
+<style>    
 body{background-image: url("imagenes/fondo_une.jpg")}
-
 </style>
 
 <script type="text/javascript"> 
@@ -35,7 +33,7 @@ function date_time(id)
         {
                 s = "0"+s;
         }
-        result = ''+days[day]+','+' '+months[month]+' '+d+' '+'de'+' '+year+''+', '+h+':'+m+':'+s;
+        result = ''+days[day]+','+' '+d+' '+'de '+months[month]+' '+'del'+' '+year+''+', '+h+':'+m+':'+s;
         document.getElementById(id).innerHTML = result;
         setTimeout('date_time("'+id+'");','1000');
         return true;

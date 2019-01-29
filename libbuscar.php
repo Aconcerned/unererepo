@@ -2,9 +2,7 @@
 <link rel="stylesheet" href="estilos\menor.css"> <!-- css de la forma -->
 
 <style>
-
 body{background-image: url("imagenes/fondo_une.jpg")}
-
 </style>
 
 <?php

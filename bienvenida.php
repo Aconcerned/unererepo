@@ -3,9 +3,7 @@
 <link rel="stylesheet" href="estilos\bienvenido.css">
 
 <style>
-body{
-background-image: url("imagenes/fondo_une.jpg")
-}
+body{background-image:url(imagenes/fondo_une.jpg)}
 </style>
 
 <center><h1>Bienvenido al sistema de reservación para clases en el CDT</h1></center> 

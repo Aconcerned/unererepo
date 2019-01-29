@@ -34,7 +34,8 @@ $res =  "Error en usuario y/o contraseña!";
 		$res = '';
 		$_SESSION['id']= $get2['id'];
 		$_SESSION['Cargo']=$row['Cargo'];
-		header("Location:reservarsalon.php?id=$id"); //Inicia la sesion
+		$_SESSION['nombre']=$row['nombre'];
+		header("Location:index.php?id=$id"); //Inicia la sesion
  }
 echo $res;
 echo '<div style="text-align: center;"><a href="javascript:history.go(-1);">Haga click para volver a la pagina anterior</a></div>';

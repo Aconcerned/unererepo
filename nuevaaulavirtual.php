@@ -40,8 +40,8 @@ if (isset($_POST['submit'])) {
   }
   
   if (count($errors) == 0) {
-  	$query = "INSERT INTO reservaaula(nombre, materia, fecha, fechaemp, fechater, numero, fechainscripcion) 
-  			  VALUES('$nombre', '$materia', '$fecha', '$fechaemp', '$fechater', '$numero', now())";
+  	$query = "INSERT INTO reservatodo(nombre, materia, salon, fecha, fechaemp, fechater, numero, fechainscripcion) 
+  			  VALUES('$nombre', '$materia', 'aula_virtual', '$fecha', '$fechaemp', '$fechater', '$numero', now())";
   	mysqli_query($db, $query);
 	echo $res;
   }

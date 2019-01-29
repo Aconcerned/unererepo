@@ -1,7 +1,7 @@
 <?php
 //Archivo de conexion 
 include_once("connection.php");
-$sql = "SELECT * FROM `reservalib` limit 10 ";
+$sql = "SELECT * FROM `reservatodo` WHERE salon='biblioteca' limit 10 ";
 $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 ?>
 <!DOCTYPE html>
@@ -12,9 +12,7 @@ $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 <link rel="stylesheet" href="estilos\clase.css"> <!-- El css de la pagina, mas que todo el de la tabla -->
 
 <style>
-
 body{background-image: url("imagenes/fondo_une.jpg")}
-
 </style>
 
 </head>

@@ -14,9 +14,7 @@ $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 <link rel="stylesheet" href="estilos\clase.css"> <!-- El css de la pagina, mas que todo el de la tabla -->
 
 <style>
-body{
-background-image: url("imagenes/fondo_une.jpg")
-}
+body{background-image:url(imagenes/fondo_une.jpg)}
 </style>
 
 </head>

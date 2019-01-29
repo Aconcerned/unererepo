@@ -4,17 +4,7 @@
 <link rel="stylesheet" href="estilos\login.css">
 
 <style>
-  #caplock{
-    display: none;   
-}
-
-body{background-image: url("imagenes/fondo_une.jpg")}
-
-form{
-    padding: 12px;
-    margin: 0px
-}
-
+#caplock{display:none}body{background-image:url(imagenes/fondo_une.jpg)}form{padding:12px;margin:0}
 </style>
 
 </head>

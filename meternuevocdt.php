@@ -36,8 +36,8 @@ if (isset($_POST['submit'])) {
   // Registrar si no hay errores
   if (count($errors2) == 0) {
 
-  	$query = "INSERT INTO reservacdt (nombre, materia, fecha, fechaemp, fechater, numero) 
-  			  VALUES('$nombre', '$materia', '$fecha', 'fechaemp', 'fechater', '$numero')";
+  	$query = "INSERT INTO reservacdt (nombre, materia, salon, fecha, fechaemp, fechater, numero) 
+  			  VALUES('$nombre', '$materia', '$fecha', '$fechaemp', '$fechater', '$numero')";
   	mysqli_query($db, $query);
 	echo $res;
   }

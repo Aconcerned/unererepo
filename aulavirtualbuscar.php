@@ -1,9 +1,7 @@
 <html>
 
 <style>
-body{
-background-image: url("imagenes/fondo_une.jpg")
-}
+body{background-image:url(imagenes/fondo_une.jpg)}
 </style>
 
 <link rel="stylesheet" href="estilos\menor.css"> <!-- css de la forma -->

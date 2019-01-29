@@ -13,7 +13,7 @@ if (mysqli_connect_errno()) {
 }
 
 // Codigo para borrar 
-$sql = "DELETE FROM reservadiseno WHERE id = $id"; 
+$sql = "DELETE FROM reservatodo WHERE id = $id"; 
 
 if (mysqli_query($conn, $sql)) {
     mysqli_close($conn);

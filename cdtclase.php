@@ -1,7 +1,7 @@
 <?php
 //Archivo de conexion 
 include_once("connection.php");
-$sql = "SELECT * FROM `reservacdt` limit 10 ";
+$sql = "SELECT * FROM `reservatodo` WHERE salon='CDT' limit 10 ";
 $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 ?>
 <!DOCTYPE html>

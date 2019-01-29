@@ -13,7 +13,7 @@ if (mysqli_connect_errno()) {
 }
 
 // sql to delete a record
-$sql = "DELETE FROM reservalib WHERE id = $id"; 
+$sql = "DELETE FROM reservatodo WHERE id = $id"; 
 
 if (mysqli_query($conn, $sql)) {
     mysqli_close($conn);

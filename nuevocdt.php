@@ -41,8 +41,8 @@ if (isset($_POST['submit'])) {
   
     //Si no hay errores, hace el insertar
   if (count($errors) == 0) {
-  	$query = "INSERT INTO reservacdt(nombre, materia, fecha, fechaemp, fechater, numero, fechainscripcion) 
-  			  VALUES('$nombre', '$materia', '$fecha', '$fechaemp', '$fechater', '$numero', now())";
+  	$query = "INSERT INTO reservatodo(nombre, materia, salon, fecha, fechaemp, fechater, numero, fechainscripcion) 
+  			  VALUES('$nombre', '$materia', 'CDT', '$fecha', '$fechaemp', '$fechater', '$numero', now())";
   	mysqli_query($db, $query);
 	echo $res;
   }
