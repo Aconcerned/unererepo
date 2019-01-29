@@ -11,7 +11,7 @@ $niet= $_POST['niet'];
 $db = mysqli_connect('localhost', 'root', '', 'prueba');
 $niet = mysqli_real_escape_string($db, $niet);
 
-$query="select * from reservaaula where nombre = '$niet' OR materia='$niet'";
+$query="select * from reservatodo where salon='aula_virtual' AND nombre = '$niet'";
 $result = mysqli_query($db, $query);
 $res = '';
 

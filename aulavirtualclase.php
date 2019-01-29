@@ -68,8 +68,8 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 
 <div id="buscador" name="buscador"> <!-- Forma de buscar datos -->
 <form method="POST" action="aulavirtualbuscar.php" style="padding:50px 250px;"> <!-- Formulario de buscar datos -->
-<h3>Buscar usando el nombre o materia del profesor</h3>
-<input type="text" placeholder="Escriba el nombre del profesor o su materia" name="niet" id="niet">
+<h3>Buscar usando el nombre del profesor</h3>
+<input type="text" placeholder="Escriba el nombre del profesor" name="niet" id="niet">
 <input type="submit" id="input buscar" name="input buscar">
 </form>
 </div>

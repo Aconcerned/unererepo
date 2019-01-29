@@ -10,7 +10,7 @@ $niet= $_POST['niet'];
 $db = mysqli_connect('localhost', 'root', '', 'prueba');
 $niet = mysqli_real_escape_string($db, $niet);
 
-$query="select * from reservadiseno where nombre = '$niet' OR materia='$niet'"; //Buscar materia o nombre
+$query="select * from reservatodo where salon='diseno' AND nombre = '$niet'"; //Buscar materia o nombre
 $result = mysqli_query($db, $query);
 $res = '';
 
