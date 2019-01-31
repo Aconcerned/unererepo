@@ -15,7 +15,7 @@ $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 <html> 
 <head>
 
-<link rel="stylesheet" href="estilos\lib.css">
+<link rel="stylesheet" href="estilos\diseno.css">
 <link rel="stylesheet" href="estilos\clase.css">
 
 <style>
@@ -46,7 +46,40 @@ body{background-image: url("imagenes/fondo_une.jpg")}
     <input type="text" readonly="readonly" value="<?php echo htmlentities($_SESSION['nombre']); ?>" placeholder="Escriba el nombre del profesor" name="nombre" id ="nombre"<?php echo $nombre; ?> ></input>
 
     <label for="mat"><b>Materia que da:</b></label>
-    <input type="text" placeholder="Escriba la materia del profesor" name="materia" id ="materia"<?php echo $materia; ?> ></input>
+   <!-- <input type="text" placeholder="Escriba la materia del profesor" name="materia" id ="materia" ></input>-->
+    
+   <select name="materia" id="materia" <?php echo $materia; ?>> 
+   <option value="MATEMATICA DISCRETA I">MATEMATICA DISCRETA I</option> 
+   <option value="INGLES I">INGLES I</option>   
+   <option value="INTRODUCCION A LA COMPUTACION">INTRODUCCION A LA COMPUTACION</option>   
+   <option value="FORMACION CIUDADANA">FORMACION CIUDADANA</option>   
+   <option value="PROGRAMACION I">PROGRAMACION I</option>   
+   <option value="INGLES II">INGLES II</option>   
+   <option value="MATEMATICA DISCRETA II">MATEMATICA DISCRETA II</option>   
+   <option value="ESTADISTICA I">ESTADISTICA I</option>   
+   <option value="PROGRAMACION II">PROGRAMACION II</option>   
+   <option value="INTERACCION HUMANO - COMPUTADOR">INTERACCION HUMANO - COMPUTADOR</option>   
+   <option value="TECNICAS DE PROGRAMACION">TECNICAS DE PROGRAMACION</option>   
+   <option value="INGLES III">INGLES III</option>   
+   <option value="ESTADISTICA II">ESTADISTICA II</option>   
+   <option value="INGLES IV">INGLES IV</option>   
+   <option value="ESTADISTICA III">ESTADISTICA III</option>   
+   <option value="MATEMATICA II">MATEMATICA II</option>   
+   <option value="PROGRAMACION III">PROGRAMACION III</option> 
+   <option value="METODOLOGIA DE LA INVESTIGACION">METODOLOGIA DE LA INVESTIGACION</option> 
+   <option value="MATEMATICA III">MATEMATICA III</option> 
+   <option value="BASE DE DATOS I">BASE DE DATOS I</option> 
+   <option value="PROGRAMACION IV">PROGRAMACION IV</option> 
+   <option value="MATEMATICA IV">MATEMATICA IV</option> 
+   <option value="PROGRAMACION V">PROGRAMACION V</option> 
+   <option value="SISTEMAS OPERATIVOS I">SISTEMAS OPERATIVOS I</option> 
+   <option value="PROGRAMACION VI">PROGRAMACION VI</option> 
+   <option value="BASE DE DATOS III">BASE DE DATOS II</option> 
+   <option value="INGENIERIA DEL SOFTWARE">INGENIERIA DEL SOFTWARE</option> 
+   <option value="SISTEMAS OPERATIVOS II">SISTEMAS OPERATIVOS II</option>
+   <option value="PROGRAMACION VII">PROGRAMACION VII</option>  
+   <option value="BASE DE DATOS IV">BASE DE DATOS IV</option>  
+   </select>   
 	
 	<label for="fec"><b>Fecha:</b></label>
     <input type="date" name="fecha" min= <?php echo date('Y-m-d');?> id ="fecha" required<?php echo $fecha; ?>"></input>

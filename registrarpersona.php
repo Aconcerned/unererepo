@@ -11,7 +11,7 @@
 
 </head>
 
-<body> <!-- El formulario en si, clonar 3 veces -->
+<body> <!-- El formulario en si -->
 <br></br>
 <div style="text-align: center;"><a href="registrarpersona.php">Haga click para refrescar</a></div>
 <center><h1>Formulario de Registro</h1></center>

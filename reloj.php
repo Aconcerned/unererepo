@@ -19,7 +19,7 @@ function date_time(id)
         day = date.getDay();
         days = new Array('Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado');
         h = date.getHours();
-        if(h<10) <!-- Si la hora es menor 10, se le anade un 0 a la izquierda -->
+        if(h<10) <!-- Si la hora es menor a 10, se le anade un 0 a la izquierda -->
         {
                 h = "0"+h;
         }
@@ -42,9 +42,7 @@ function date_time(id)
 </head>
 
 <body>
-           
 	   <center><span id="date_time"></span></center>
            <script type="text/javascript">window.onload = date_time('date_time');</script>
-
 </body>
 </html>

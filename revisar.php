@@ -9,6 +9,7 @@ body{
 </style>
 </head>
 
+<body>
 <?php
 session_start();
 $db = mysqli_connect('localhost', 'root', '', 'prueba'); //Datos de la base de datos
@@ -28,17 +29,18 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC); //Agarra los datos de la fila
 
 $count = mysqli_num_rows($result);
 
-$res =  "Error en usuario y/o contraseña!";
+$res = "Error de usuario y/o clave";
 
  if($row["nombre"]){ //Revisa si todo salio bien
 		$res = '';
 		$_SESSION['id']= $get2['id'];
 		$_SESSION['Cargo']=$row['Cargo'];
 		$_SESSION['nombre']=$row['nombre'];
-		header("Location:index.php?id=$id"); //Inicia la sesion
- }
-echo $res;
-echo '<div style="text-align: center;"><a href="javascript:history.go(-1);">Haga click para volver a la pagina anterior</a></div>';
-
+        
+        header("Location:index.php?id=$id"); //Inicia la sesion
+ }else{
+ echo $res;
+}
  ?>
+ </body>
  </html>

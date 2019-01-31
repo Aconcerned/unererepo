@@ -28,8 +28,8 @@ body{background-image: url("imagenes/fondo_une.jpg")}
     <input type="text" placeholder="Escriba el nombre del profesor" name="nombre" id ="nombre" required<?php echo $nombre; ?>></input>
 
     <label for="mat"><b>Materia que da</b></label>
-    <input type="text" placeholder="Escriba la materia del profesor" name="materia" id ="materia" required<?php echo $materia; ?>></input>
-	
+    <input type="text" placeholder="Escriba la materia del profesor" name="materia" id ="materia" required<?php echo $materia; ?>></input> 
+
 	<label for="dat"><b>Dia de la actividad</b></label>
     <input id="fecha" name="fecha" type="date" value="31-12-2018" required<?php echo $fecha; ?>></input>
 	
