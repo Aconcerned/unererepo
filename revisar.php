@@ -29,17 +29,19 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC); //Agarra los datos de la fila
 
 $count = mysqli_num_rows($result);
 
-$res = "Error de usuario y/o clave";
-
  if($row["nombre"]){ //Revisa si todo salio bien
 		$res = '';
 		$_SESSION['id']= $get2['id'];
 		$_SESSION['Cargo']=$row['Cargo'];
 		$_SESSION['nombre']=$row['nombre'];
-        
-        header("Location:index.php?id=$id"); //Inicia la sesion
+		//header("Location:index.php?id=$id#top"); //Inicia la sesion
+        echo "<script type='text/javascript'> top.document.location = 'index.php?id=$id'; </script>";
  }else{
- echo $res;
+	$res = "El usuario o la clave es incorrecta. Seras redireccionado";
+	echo "<script type='text/javascript'>alert('$res');
+    window.location.href='javascript:history.go(-1)';
+	</script>";
+  
 }
  ?>
  </body>

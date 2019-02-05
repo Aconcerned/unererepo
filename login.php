@@ -16,7 +16,7 @@
 <br></br>
 <div id="caplock" style="none">El bloqueo de mayúsculas está activado</div>
   
-  <form method="POST" action="revisar.php" target="_top"> <!-- Se comunica con revisar.php que hace el login en si-->
+  <form method="POST" action="revisar.php"> <!-- Se comunica con revisar.php que hace el login en si-->
     <label for="uname"><b>Nombre de usuario:</b></label>
     <input type="text" onKeyPress="isMayus(event)"  placeholder="Escriba su nombre de usuario" name="nombre" id="nombre" required></input>
 

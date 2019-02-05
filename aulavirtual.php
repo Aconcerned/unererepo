@@ -47,36 +47,33 @@ body{background-image:url(imagenes/fondo_une.jpg)}
    <!-- <input type="text" placeholder="Escriba la materia del profesor" name="materia" id ="materia" ></input>-->
     
    <select name="materia" id="materia" <?php echo $materia; ?>> 
-   <option value="MATEMATICA DISCRETA I">MATEMATICA DISCRETA I</option> 
-   <option value="INGLES I">INGLES I</option>   
    <option value="INTRODUCCION A LA COMPUTACION">INTRODUCCION A LA COMPUTACION</option>   
-   <option value="FORMACION CIUDADANA">FORMACION CIUDADANA</option>   
-   <option value="PROGRAMACION I">PROGRAMACION I</option>   
-   <option value="INGLES II">INGLES II</option>   
-   <option value="MATEMATICA DISCRETA II">MATEMATICA DISCRETA II</option>   
-   <option value="ESTADISTICA I">ESTADISTICA I</option>   
+   <option value="PROGRAMACION I">PROGRAMACION I</option>        
    <option value="PROGRAMACION II">PROGRAMACION II</option>   
-   <option value="INTERACCION HUMANO - COMPUTADOR">INTERACCION HUMANO - COMPUTADOR</option>   
-   <option value="TECNICAS DE PROGRAMACION">TECNICAS DE PROGRAMACION</option>   
-   <option value="INGLES III">INGLES III</option>   
-   <option value="ESTADISTICA II">ESTADISTICA II</option>   
-   <option value="INGLES IV">INGLES IV</option>   
-   <option value="ESTADISTICA III">ESTADISTICA III</option>   
-   <option value="MATEMATICA II">MATEMATICA II</option>   
    <option value="PROGRAMACION III">PROGRAMACION III</option> 
-   <option value="METODOLOGIA DE LA INVESTIGACION">METODOLOGIA DE LA INVESTIGACION</option> 
-   <option value="MATEMATICA III">MATEMATICA III</option> 
-   <option value="BASE DE DATOS I">BASE DE DATOS I</option> 
    <option value="PROGRAMACION IV">PROGRAMACION IV</option> 
-   <option value="MATEMATICA IV">MATEMATICA IV</option> 
    <option value="PROGRAMACION V">PROGRAMACION V</option> 
-   <option value="SISTEMAS OPERATIVOS I">SISTEMAS OPERATIVOS I</option> 
    <option value="PROGRAMACION VI">PROGRAMACION VI</option> 
-   <option value="BASE DE DATOS III">BASE DE DATOS II</option> 
-   <option value="INGENIERIA DEL SOFTWARE">INGENIERIA DEL SOFTWARE</option> 
-   <option value="SISTEMAS OPERATIVOS II">SISTEMAS OPERATIVOS II</option>
    <option value="PROGRAMACION VII">PROGRAMACION VII</option>  
-   <option value="BASE DE DATOS IV">BASE DE DATOS IV</option>  
+   <option value="INTERACCION HUMANO - COMPUTADOR">INTERACCION HUMANO - COMPUTADOR</option>   
+   <option value="TECNICAS DE PROGRAMACION">TECNICAS DE PROGRAMACION</option>     
+   <option value="SISTEMAS OPERATIVOS I">SISTEMAS OPERATIVOS I</option> 
+   <option value="SISTEMAS OPERATIVOS II">SISTEMAS OPERATIVOS II</option>
+   <option value="INGENIERIA DEL SOFTWARE">INGENIERIA DEL SOFTWARE</option>  
+   <option value="COMPUTACION I">COMPUTACION I</option>        
+   <option value="COMPUTACION II">COMPUTACION II</option>   
+   <option value="COMPUTACION III">COMPUTACION III</option> 
+   <option value="COMPUTACION IV">COMPUTACION IV</option> 
+   <option value="COMPUTACION V">COMPUTACION V</option> 
+   <option value="COMPUTACION VI">COMPUTACIONVI</option> 
+   <option value="COMPUTACION VII">COMPUTACION VII</option>  
+   <option value="COMPUTACION VIII">COMPUTACION VIII</option>  
+   <option value="COMPUTACION IX">COMPUTACION IX</option>  
+   <option value="COMPUTACION X">COMPUTACION X</option>  
+   <option value="TOPOGRAFIA">TOPOGRAFIA</option>  
+   <option value="ESTRUCTURAS I">ESTRUCTURAS I</option>  
+   <option value="ESTRUCTURAS II">ESTRUCTURAS II</option>
+   <option value="PUENTES">PUENTES</option>
    </select>                            
 
 	<label for="fec"><b>Fecha:</b></label>
