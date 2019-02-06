@@ -25,7 +25,8 @@ if (isset($_POST['submit'])) {
   $fechater = mysqli_real_escape_string($db, $_POST['fechater']);
   $fechaemp = mysqli_real_escape_string($db, $_POST['fechaemp']);
   $numero = mysqli_real_escape_string($db, $_POST['numero']);
-  
+  $salon = 'aula_virtual';
+
   // Muestra los errores si de alguna manera el usuario nego los required
   if (empty($nombre)) { array_push($errors, "El nombre no esta"); }
   if (empty($materia)) { array_push($errors, "La materia no esta"); }
@@ -34,10 +35,36 @@ if (isset($_POST['submit'])) {
   if (empty($fechater)) { array_push($errors, "La hora de terminacion no esta"); }
   if (empty($numero)) { array_push($errors, "No se especificó el numero de computadores"); }
   
-  // Evitar que el usuario meta la hora de comienzo igual de la hora de terminacion
-  if($fechaemp === $fechater){
+   // Evitar que el usuario meta la hora de comienzo igual de la hora de terminacion
+   if($fechaemp === $fechater){
+    echo '';
+    echo 'Algo salio mal';
+    echo '';
 	  array_push($errors, "Las horas son iguales, cambielas");
   }
+  
+  if($fechater < $fechaemp){
+    echo '';
+    echo 'Algo salio mal';
+    echo '';
+	  array_push($errors, "La hora a la que comienza la clase y la hora a la que termina la clase no tienen sentido");
+  }
+
+   //Revisar si hay una clase en exactamente el mismo dia y la misma hora
+   
+   $date_check_query = "SELECT * FROM reservatodo WHERE fecha='$fecha' AND salon='$salon' LIMIT 1";
+    
+   $result = mysqli_query($db, $date_check_query);
+   $date = mysqli_fetch_assoc($result);
+ 
+   if ($date) { // Si ya existe la clase
+     if ($date['fecha'] === $fecha AND $date['salon']===$salon) {
+      echo ''; 
+      echo 'Algo salio mal';
+      echo '';
+      array_push($errors, "Ya hay una clase en ese dia y en esa misma hora");
+     }
+   }
   
   if (count($errors) == 0) {
   	$query = "INSERT INTO reservatodo(nombre, materia, salon, fecha, fechaemp, fechater, numero, fechainscripcion) 

@@ -49,16 +49,16 @@ body{background-image: url("imagenes/fondo_une.jpg")}
    <!-- <input type="text" placeholder="Escriba la materia del profesor" name="materia" id ="materia" ></input>-->
     
    <select name="materia" id="materia" <?php echo $materia; ?>> 
-   <option value="DISEÑO I">DISEÑO I</option>  
-   <option value="DISEÑO II">DISEÑO II</option>  
-   <option value="DISEÑO III">DISEÑO III</option> 
-   <option value="DISEÑO IV">DISEÑO IV</option> 
-   <option value="DISEÑO V">DISEÑO V</option> 
-   <option value="DISEÑO VI">DISEÑO VI</option> 
-   <option value="DISEÑO VII">DISEÑO VII</option> 
-   <option value="DISEÑO VIII">DISEÑO VIII</option> 
-   <option value="DISEÑO IX">DISEÑO IX</option> 
-   <option value="DISEÑO X">DISEÑO X</option>
+   <option value="DISENO I">DISEÑO I</option>  
+   <option value="DISENO II">DISEÑO II</option>  
+   <option value="DISENO III">DISEÑO III</option> 
+   <option value="DISENO IV">DISEÑO IV</option> 
+   <option value="DISENO V">DISEÑO V</option> 
+   <option value="DISENO VI">DISEÑO VI</option> 
+   <option value="DISENO VII">DISEÑO VII</option> 
+   <option value="DISENO VIII">DISEÑO VIII</option> 
+   <option value="DISENO IX">DISEÑO IX</option> 
+   <option value="DISENO X">DISEÑO X</option>
    <option value="DIBUJO TECNICO">DIBUJO TECNICO</option>  
    <option value="COLOR">COLOR</option>  
    <option value="CREATIVIDAD">CREATIVIDAD</option>  

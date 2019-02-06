@@ -72,7 +72,7 @@ class Backup_Database {
      */
     var $batchSize;
     /**
-     * Initializador de la base de datos
+     * Inicializador de la base de datos
      */
     public function __construct($host, $username, $passwd, $dbName, $charset = 'utf8') {
         $this->host            = $host;
