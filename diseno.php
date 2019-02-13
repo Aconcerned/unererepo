@@ -15,8 +15,8 @@ $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 <html> 
 <head>
 
-<link rel="stylesheet" href="estilos\diseno.css">
-<link rel="stylesheet" href="estilos\clase.css">
+<link rel="stylesheet" href="estilos\diseno1.css">
+<link rel="stylesheet" href="estilos\clase1.css">
 
 <style>
 body{background-image: url("imagenes/fondo_une.jpg")}
@@ -43,11 +43,12 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 <form method="POST" action ="diseno.php"/> <!-- El formulario en si -->
 <?php include('errors.php'); ?>
     <label for="nom"><b>Nombre del profesor:</b></label> 
+    <br></br>
     <input type="text" value="<?php echo htmlentities($_SESSION['nombre']); ?>" placeholder="Escriba el nombre del profesor" name="nombre" id ="nombre"<?php echo $nombre; ?> ></input>
-
+    <br></br>
     <label for="mat"><b>Materia que da:</b></label>
    <!-- <input type="text" placeholder="Escriba la materia del profesor" name="materia" id ="materia" ></input>-->
-    
+   <br></br>
    <select name="materia" id="materia" <?php echo $materia; ?>> 
    <option value="DISENO I">DISEÑO I</option>  
    <option value="DISENO II">DISEÑO II</option>  
@@ -68,21 +69,30 @@ body{background-image: url("imagenes/fondo_une.jpg")}
    <option value="ILUSTRACION II">ILUSTRACION II</option> 
    <option value="ILUSTRACION III">ILUSTRACION III</option> 
    </select>   
-	
-	<label for="fec"><b>Fecha:</b></label>
-    <input type="date" name="fecha" min= <?php echo date('Y-m-d');?> id ="fecha" required<?php echo $fecha; ?>"></input>
+   <br></br>
+    
+   <label for="fec"><b>Fecha:</b></label>
+   <br></br>
+   <input type="date" name="fecha" min= <?php echo date('Y-m-d');?> id ="fecha" required<?php echo $fecha; ?>"></input>
+   <br></br>
 
 	<label for="hor1"><b>Hora a la que empieza:</b></label>
-	<input type="time" min="08:30" max="16:00" name="fechaemp" id ="fechaemp" required<?php echo $fechaemp; ?>"></input>
-	
+    <br></br>
+    <input type="time" min="08:30" max="16:00" name="fechaemp" id ="fechaemp" required<?php echo $fechaemp; ?>"></input>
+    
+    <br></br>
 	<label for="hor2"><b>Hora a la que termina:</b></label>
-	<input type="time" min="09:30" max="17:00" name="fechater" id ="fechater" required<?php echo $fechater; ?>"></input>
-	
+    <br></br>
+    <input type="time" min="09:30" max="17:00" name="fechater" id ="fechater" required<?php echo $fechater; ?>"></input>
+    
+    <br></br>
 	<label for="num"><b>Número de computadores a usar (Máximo 5):</b></label>
-	<input type="number" placeholder="Escriba el numero de pcs a usar" min="1" max="5" name="numero" id ="numero"<?php echo $numero; ?>></input>
-	
+    <br></br>
+    <input type="number" placeholder="Escriba el numero de pcs a usar" min="1" max="5" name="numero" id ="numero"<?php echo $numero; ?>></input>
+    <br></br>
+    
     <div style="text-align: center">
-	<input type="submit" aling="center" id="submit" name="submit" value="Crear clase"></input>
+    <input type="submit" aling="center" id="submit" name="submit" value="Crear clase"></input>
     </div>
 
 	<div style="text-align: center" class="container" aling="center" style="background-color:#f1f1f1">

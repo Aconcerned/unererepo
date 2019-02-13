@@ -1,10 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml"> <!-- Inicio -->
 <head> <!-- Logo, menu, el css, etc -->
 
-<link rel="stylesheet" href="estilos\login.css">
+<link rel="stylesheet" href="estilos\login1.css">
 
 <style>
-#caplock{display:none}body{background-image:url(imagenes/fondo_une.jpg)}form{padding:12px;margin:0}
+      body {
+      background-image:url(imagenes/fondo_une.jpg);
+      }
 </style>
 
 </head>
@@ -17,16 +19,20 @@
 <div id="caplock" style="none">El bloqueo de mayúsculas está activado</div>
   
   <form method="POST" action="revisar.php"> <!-- Se comunica con revisar.php que hace el login en si-->
-    <label for="uname"><b>Nombre de usuario:</b></label>
+    <label for="uname"><b>Nombre de usuario</b></label>
+    <br></br>
     <input type="text" onKeyPress="isMayus(event)"  placeholder="Escriba su nombre de usuario" name="nombre" id="nombre" required></input>
+    <br></br>
 
-    <label for="psw"><b>Clave:</b></label>
+    <label for="psw"><b>Clave</b></label>
+    <br></br>
     <input type="password" onKeyPress="isMayus(event)"  placeholder="Escriba su clave de usuario" name="clave" id="clave" required></input>
-    
-<input type="submit" id="Entrar" class="floated" onclick="MyFunction()" value="Entrar"></input>
+    <br></br>
+
+<input type="submit" id="Entrar" onclick="MyFunction()" value="Entrar"></input>
 
 <div class="container" style="background-color:#f1f1f1">
-<button type="Reset" id="reset" class="floated" onclick="MyFunction()">Cancelar</button>
+<button type="Reset" id="reset"  onclick="MyFunction()">Cancelar</button>
  </div>
 
 <script type="text/javascript">
