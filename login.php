@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"> <!-- Inicio -->
 <head> <!-- Logo, menu, el css, etc -->
 
-<link rel="stylesheet" href="estilos\login1.css">
+<link rel="stylesheet" href="estilos\login.css">
 
 <style>
       body {
@@ -16,19 +16,33 @@
 <h3>Nota: Es sensible a mayúsculas y minúsculas, por favor escriba de manera consistente. Por ejemplo: "hola" no es igual a "HOLA" u "HoLa"</h3>
 
 <br></br>
-<div id="caplock" style="none">El bloqueo de mayúsculas está activado</div>
+
+<center>
+<b><div id="caplock" style="none">El bloqueo de mayúsculas está activado</div></b>
+</center>
   
   <form method="POST" action="revisar.php"> <!-- Se comunica con revisar.php que hace el login en si-->
-    <label for="uname"><b>Nombre de usuario</b></label>
+  <center><h3>Coloque sus datos</h3></center>
     <br></br>
+  <center><label for="uname"><b>Nombre de usuario</b></label></center>
+    
+    <center>
     <input type="text" onKeyPress="isMayus(event)"  placeholder="Escriba su nombre de usuario" name="nombre" id="nombre" required></input>
+    </center>
+    
+    <br></br>
+    
     <br></br>
 
-    <label for="psw"><b>Clave</b></label>
-    <br></br>
+    <center><label for="psw"><b>Clave</b></label></center>
+    
+    <center>
     <input type="password" onKeyPress="isMayus(event)"  placeholder="Escriba su clave de usuario" name="clave" id="clave" required></input>
+    </center>
+    
     <br></br>
-
+    <br></br>
+    
 <input type="submit" id="Entrar" onclick="MyFunction()" value="Entrar"></input>
 
 <div class="container" style="background-color:#f1f1f1">

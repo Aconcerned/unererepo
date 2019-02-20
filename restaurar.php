@@ -22,7 +22,7 @@ if (! empty($response)) {
 
 <center><form method="post" action="restaure.php" enctype="multipart/form-data" id="frm-restore">
     <div class="form-row">
-        <h2>Seleccione el archivo</h2>
+        <h2>Seleccione el archivo .sql a subir</h2>
         <div>
             <input type="file" name="backup_file" class="input-file" />
         </div>

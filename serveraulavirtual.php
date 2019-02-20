@@ -5,7 +5,7 @@
 	
 	//define aulavirtualclase of column
 	$columns = array(
-		0 =>'nombre', 
+		0 => 'nombre', 
 		1 => 'materia',
 		2 => 'fecha',
 		3 => 'fechaemp',

@@ -52,10 +52,12 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 		 <center><td class="editable-col" contenteditable="true" colaula='4' oldVal ="<?php echo $res['fechater'];?>"><?php echo $res['fechater'];?></td></center>
          <center><td class="editable-col" contenteditable="true" colaula='5' oldVal ="<?php echo $res['numero'];?>"><?php echo $res['numero'];?></td></center>
 		 <center><td class="editable-col" contenteditable="false" colaula='6' oldVal ="<?php echo $res['fechainscripcion'];?>"><?php echo $res['fechainscripcion'];?></td></center>
+		
 		 <?php
 		 echo "<td><a href='aulavirtualclaseborrar.php?id=".$res['id']."'>Borrar</a></td>";
 		 echo "</tr>";
 		 ?>
+
    </tr>
 	  <?php endforeach;?> <!-- Fin del for -->
    </tbody>
@@ -69,8 +71,11 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 <div id="buscador" name="buscador"> <!-- Forma de buscar datos -->
 <form method="POST" action="aulavirtualbuscar.php" style="padding:50px 250px;"> <!-- Formulario de buscar datos -->
 <h3>Buscar usando el nombre del profesor</h3>
-<input type="text" placeholder="Escriba el nombre del profesor" name="niet" id="niet">
-<input type="submit" id="input buscar" name="input buscar">
+
+<center><input type="text" placeholder="Escriba el nombre del profesor" name="niet" id="niet"></center>
+<br></br>
+<center><input type="submit" id="input buscar" name="input buscar"></center>
+
 </form>
 </div>
 

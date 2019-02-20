@@ -4,7 +4,7 @@
  session_start();
  echo @$_SESSION['Cargo']; //Muestra si el usuario inicio o no sesion usando el cargo
  echo '<br></br>';
- echo @$_SESSION['nombre'];
+ echo @$_SESSION['nombre']; //Muestra el nombre del usuario
 ?>
 
 <head> <!-- Logo, menu, el css, etc -->
@@ -47,9 +47,11 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 </head>
 
 <body> <!-- Aqui ira todo lo demas-->
+
 <div class="contenido"> <!-- Muestra lo que esta en los li -->
-<table width="900" border="0" cellspacing="0" cellpadding="0">    
+<table width="100%" border="0" cellspacing="0" cellpadding="0">    
 </div>
+
 <?php
 	} //Fin el if del codigo php de mas arriba
 	if(@$_SESSION['Cargo']==1){ //Si el usuario inicio sesion, muestra esto usando el cargo
@@ -60,6 +62,7 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 <div id="header">
 <iframe src="reloj.php" width="100%" height="48px" name="relojito">
 </iframe>
+
 <!-- Muestra contenido de los archivos php-->
 <ul class="main-nav">
   <li><a href="bienvenida2.php" target="contenido">Principal</a></li> <!-- Archivo de bienvenida-->

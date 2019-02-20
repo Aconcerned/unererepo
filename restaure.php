@@ -20,8 +20,11 @@ if (! empty($_FILES)) {
             "type" => "error",
             "message" => "Invalid File Type"
         );
-        echo 'Error. No es un archivo .sql. Use un archivo .sql para restaurar la base de datos';
-        echo '<div style="text-align: center;"><a href="javascript:history.go(-1);">Haga click para volver a la pagina anterior</a></div>';
+        $res = "El archivo no es un archivo sql. Haga click en aceptar para intentarlo nuevamente";
+        echo "<script type='text/javascript'>alert('$res');
+        window.location.href='javascript:history.go(-1)';
+        </script>";
+
     } else {
         if (is_uploaded_file($_FILES["backup_file"]["tmp_name"])) {
             move_uploaded_file($_FILES["backup_file"]["tmp_name"], $_FILES["backup_file"]["name"]);
@@ -66,8 +69,10 @@ function restoreMysqlDB($filePath, $conn)
                 "type" => "success",
                 "message" => "Database Restore Completed Successfully."
             );
-            echo 'Se logro restaurar todo';
-            echo '<div style="text-align: center;"><a href="javascript:history.go(-1);">Haga click para refrescar</a></div>';
+            $res2 = "Se restauro todo correctamente, haga click en aceptar para ser redireccionado";
+            echo "<script type='text/javascript'>alert('$res2');
+            window.location.href='javascript:history.go(-1)';
+            </script>";
         }
     } // end if file exists
     return $response;

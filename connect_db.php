@@ -13,7 +13,7 @@ $clave    = "";
 $email = "";
 $cedula = "";
 $errors = array(); 
-$res="EXITO!"; //Si todo sale bien
+$res="EXITO! Se ha enviado un correo, revise si le llego"; //Si todo sale bien
 
 // conectar a la base de datos
 $db = mysqli_connect('localhost', 'root', '', 'prueba');
@@ -69,7 +69,9 @@ if (isset($_POST['submit'])) {
   	$clave = md5($clave); //Convertir la clave en md5
   	$query = "INSERT INTO usuarios (nombre, clave, email, cedula, Cargo) 
   			  VALUES('$nombre', '$clave', '$email', '$cedula', '1')";
-	echo $res;
+  echo "<script type='text/javascript'>alert('$res');
+  window.location.href='javascript:history.go(-1)';
+  </script>";
   	mysqli_query($db, $query);
 	
 	$mail->IsSMTP(); // telling the class to use SMTP
@@ -77,22 +79,24 @@ if (isset($_POST['submit'])) {
     $mail->SMTPSecure = "tls";        // sets the prefix to the servier
     $mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
     $mail->Port       = 587;                   // set the SMTP port for the GMAIL server
-    $mail->Username   = "mailboyforone@gmail.com";  // GMAIL nombre, nota: debes permitirle al servidor de que permita aplicaciones de otras procedencias, si no no te va a dejar
+    $mail->Username   = "mailboyforone2@gmail.com";  // GMAIL nombre, nota: debes permitirle al servidor de que permita aplicaciones de otras procedencias, si no no te va a dejar
     $mail->Password   = "hellotheregeneralkenobi";            // GMAIL clave
 	$mail->SMTPDebug = 0;
 	
-	    $mail->From = "mailboyforone@gmail.com";
+	    $mail->From = "mailboyforone2@gmail.com";
         $mail->FromName = "Hola";
         $mail->AddAddress($_POST['email']);
-        $mail->AddReplyTo("mailboyforone@gmail.com", "Hola");
-        $mail->Subject = 'Se ha registrado exitosamente';
-        $mail->Body = "Usted se ha registrado como profesor en el sistema de reservas de salones de computación de la Universidad Nueva Esparta";
+        $mail->AddReplyTo("mailboyforone2@gmail.com", "Hola");
+        $mail->Subject = 'Se ha registrado exitosamente (Email automatizado)';
+        $mail->Body = "Usted se ha registrado como profesor en el sistema de reservas de salones de computación de la Universidad Nueva Esparta. Si usted no se ha registrado, ignore éste correo";
 		
         //Mandar mail
         if (!$mail->Send())
         {
-            echo "El email no se envió <p>";
-            echo "Hubo un error mandando el mensaje: " . $mail->ErrorInfo;
+          $res2 = "Hubo un error mandando el mensaje:" . $mail->ErrorInfo;
+          echo "<script type='text/javascript'>alert('$res2');
+          window.location.href='javascript:history.go(-1)';
+          </script>";
             exit;
         }
     echo '<br></br>';

@@ -2,7 +2,7 @@
 <html> <!-- Inicio -->
 <head> <!-- Logo, menu, el css, etc -->
 
-<link rel="stylesheet" href="estilos\registrar1.css">
+<link rel="stylesheet" href="estilos\registrar.css">
 
 <style>
 body {
@@ -21,25 +21,47 @@ body {
 <h3>Nota: Es sensible a mayúsculas y minúsculas, por favor escriba de manera consistente. Por ejemplo: "hola" no es igual a "HOLA" u "HoLa"</h3>
 
 <br></br>
-<div id="caplock" style="none">El bloqueo de mayúsculas está activado</div>
+
+<center>
+<b><div id="caplock" style="none">El bloqueo de mayúsculas está activado</div></b>
+</center>
+
 <form method="POST" action ="registrarpersonaadmin.php"/> <!-- El formulario en si -->
     <?php include('errors.php'); ?> <!-- Detector de errores -->
-    <label for="nom"><b>Nombre de usuario:</b></label>
+    <center><h3>Coloque sus datos</h3></center>
     <br></br>
+    <center><label for="nom"><b>Nombre de usuario</b></label></center>
+    <center>
     <input type="text" onKeyPress="isMayus(event)"  placeholder="Escriba su nombre de usuario" name="nombre" id ="nombre" required<?php echo $nombre; ?>"></input>
+    </center>
+    
     <br></br>
-    <label for="clav"><b>Clave:</b></label>
     <br></br>
+
+    <center><label for="clav"><b>Clave</b></label></center>
+    <center>
     <input type="password" onKeyPress="isMayus(event)"  placeholder="Escriba su clave de usuario" name="clave" id ="clave" required<?php echo $clave; ?>"></input>
-	<br></br>
-	<label for="em"><b>Email:</b></label>
+	</center>
+
     <br></br>
+    <br></br>
+
+	<center><label for="em"><b>Email</b></label></center>
+    <center>
     <input type="email" placeholder="Escriba su email" name="email" id ="email" required<?php echo $email; ?>"></input>
+    </center>
+    
     <br></br>
-	<label for="ced"><b>Cedula de identidad:</b></label>
+	<br></br>
+
+    <center><label for="ced"><b>Cedula de identidad</b></label></center>
+    <center>
+    <input type="number" placeholder="Solo numeros" name="cedula" id ="cedula" required<?php echo $cedula; ?>></input>
+    </center>
+
     <br></br>
-    <input type="number" placeholder="Escriba su cedula de identidad" name="cedula" id ="cedula" required<?php echo $cedula; ?>></input>
     <br></br>
+    
     <input type="submit" id="submit" name="submit" class="floated" value="Registrarse"></input>
 
 <div class="container" style="background-color:#f1f1f1">

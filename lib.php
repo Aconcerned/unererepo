@@ -15,8 +15,8 @@ $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 <html> 
 <head>
 
-<link rel="stylesheet" href="estilos\diseno1.css">
-<link rel="stylesheet" href="estilos\clase1.css">
+<link rel="stylesheet" href="estilos\diseno.css">
+<link rel="stylesheet" href="estilos\clase.css">
 
 <style>
 body{background-image: url("imagenes/fondo_une.jpg")}
@@ -40,68 +40,94 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 <center><h2>Nueva clase</h2></center>
 <center><h3>Todos los campos son requeridos</h3></center>
 <div style="text-align: center;"><a href="https://browser-update.org/es/update-browser.html" target="_blank">Si no puede ver los campos de fecha y hora, haga click para ver si necesita actualizar su navegador</a></div> 
+<br></br>
+
 <form method="POST" action ="lib.php"/> <!-- El formulario en si -->
 <?php include('errors.php'); ?>
-    <label for="nom"><b>Nombre del profesor:</b></label> 
+    <center><label for="nom"><b>Nombre del profesor</b></label></center> 
     <br></br>
+    <center>
     <input type="text" readonly="readonly" value="<?php echo htmlentities($_SESSION['nombre']); ?>" placeholder="Escriba el nombre del profesor" name="nombre" id ="nombre"<?php echo $nombre; ?> ></input>
+    </center>
     <br></br>
 
-    <label for="mat"><b>Materia que da:</b></label>
+    <center><label for="mat"><b>Materia que da</b></label></center>
    <!-- <input type="text" placeholder="Escriba la materia del profesor" name="materia" id ="materia" ></input>-->
     <br></br>
+    <center>
    <select name="materia" id="materia" <?php echo $materia; ?>> 
    <option value="MATEMATICA DISCRETA I">MATEMATICA DISCRETA I</option> 
+   <option value="MATEMATICA DISCRETA II">MATEMATICA DISCRETA II</option> 
+   <option value="MATEMATICA I">MATEMATICA I</option>   
+   <option value="MATEMATICA II">MATEMATICA II</option> 
+   <option value="MATEMATICA III">MATEMATICA III</option>
+   <option value="MATEMATICA IV">MATEMATICA IV</option>    
    <option value="INGLES I">INGLES I</option>   
+   <option value="INGLES II">INGLES II</option>  
+   <option value="INGLES III">INGLES III</option>   
+   <option value="INGLES IV">INGLES IV</option>
    <option value="INTRODUCCION A LA COMPUTACION">INTRODUCCION A LA COMPUTACION</option>   
    <option value="FORMACION CIUDADANA">FORMACION CIUDADANA</option>   
-   <option value="PROGRAMACION I">PROGRAMACION I</option>   
-   <option value="INGLES II">INGLES II</option>   
-   <option value="MATEMATICA DISCRETA II">MATEMATICA DISCRETA II</option>   
+   <option value="PROGRAMACION I">PROGRAMACION I</option> 
+   <option value="PROGRAMACION II">PROGRAMACION II</option>
+   <option value="PROGRAMACION III">PROGRAMACION III</option>    
+   <option value="PROGRAMACION IV">PROGRAMACION IV</option> 
+   <option value="PROGRAMACION V">PROGRAMACION V</option>   
+   <option value="PROGRAMACION VI">PROGRAMACION VI</option>  
+   <option value="PROGRAMACION VII">PROGRAMACION VII</option>  
    <option value="ESTADISTICA I">ESTADISTICA I</option>   
-   <option value="PROGRAMACION II">PROGRAMACION II</option>   
+   <option value="ESTADISTICA II">ESTADISTICA II</option>   
+   <option value="ESTADISTICA III">ESTADISTICA III</option>   
    <option value="INTERACCION HUMANO - COMPUTADOR">INTERACCION HUMANO - COMPUTADOR</option>   
    <option value="TECNICAS DE PROGRAMACION">TECNICAS DE PROGRAMACION</option>   
-   <option value="INGLES III">INGLES III</option>   
-   <option value="ESTADISTICA II">ESTADISTICA II</option>   
-   <option value="INGLES IV">INGLES IV</option>   
-   <option value="ESTADISTICA III">ESTADISTICA III</option>   
-   <option value="MATEMATICA II">MATEMATICA II</option>   
-   <option value="PROGRAMACION III">PROGRAMACION III</option> 
    <option value="METODOLOGIA DE LA INVESTIGACION">METODOLOGIA DE LA INVESTIGACION</option> 
-   <option value="MATEMATICA III">MATEMATICA III</option> 
    <option value="BASE DE DATOS I">BASE DE DATOS I</option> 
-   <option value="PROGRAMACION IV">PROGRAMACION IV</option> 
-   <option value="MATEMATICA IV">MATEMATICA IV</option> 
-   <option value="PROGRAMACION V">PROGRAMACION V</option> 
-   <option value="SISTEMAS OPERATIVOS I">SISTEMAS OPERATIVOS I</option> 
-   <option value="PROGRAMACION VI">PROGRAMACION VI</option> 
-   <option value="BASE DE DATOS III">BASE DE DATOS II</option> 
-   <option value="INGENIERIA DEL SOFTWARE">INGENIERIA DEL SOFTWARE</option> 
-   <option value="SISTEMAS OPERATIVOS II">SISTEMAS OPERATIVOS II</option>
-   <option value="PROGRAMACION VII">PROGRAMACION VII</option>  
+   <option value="BASE DE DATOS II">BASE DE DATOS II</option> 
+   <option value="BASE DE DATOS III">BASE DE DATOS III</option> 
    <option value="BASE DE DATOS IV">BASE DE DATOS IV</option>  
-   </select>   
+   <option value="SISTEMAS OPERATIVOS I">SISTEMAS OPERATIVOS I</option> 
+   <option value="SISTEMAS OPERATIVOS II">SISTEMAS OPERATIVOS II</option>
+   <option value="INGENIERIA DEL SOFTWARE">INGENIERIA DEL SOFTWARE</option> 
+   <option value="COMPUTACION I">COMPUTACION I</option>        
+   <option value="COMPUTACION II">COMPUTACION II</option>   
+   <option value="COMPUTACION III">COMPUTACION III</option> 
+   <option value="COMPUTACION IV">COMPUTACION IV</option> 
+   <option value="COMPUTACION V">COMPUTACION V</option> 
+   <option value="COMPUTACION VI">COMPUTACIONVI</option> 
+   <option value="COMPUTACION VII">COMPUTACION VII</option>  
+   <option value="COMPUTACION VIII">COMPUTACION VIII</option>  
+   <option value="COMPUTACION IX">COMPUTACION IX</option>  
+   <option value="COMPUTACION X">COMPUTACION X</option>  
+   </select>
+   </center>   
    <br></br>
 
-	<label for="fec"><b>Fecha:</b></label>
+	<center><label for="fec"><b>Fecha</b></label></center>
     <br></br>
+    <center>
     <input type="date" name="fecha" min= <?php echo date('Y-m-d');?> id ="fecha" required<?php echo $fecha; ?>"></input>
+    </center>
     <br></br>
 
-	<label for="hor1"><b>Hora a la que empieza:</b></label>
+	<center><label for="hor1"><b>Hora a la que empieza</b></label></center>
     <br></br>
+    <center>
     <input type="time" min="08:30" max="16:00" name="fechaemp" id ="fechaemp" required<?php echo $fechaemp; ?>"></input>
+    </center>
     <br></br>
     
-	<label for="hor2"><b>Hora a la que termina:</b></label>
+	<center><label for="hor2"><b>Hora a la que termina</b></label></center>
     <br></br>
+    <center>
     <input type="time" min="09:30" max="17:00" name="fechater" id ="fechater" required<?php echo $fechater; ?>"></input>
+    </center>
     <br></br>
     
-	<label for="num"><b>Número de computadores a usar (Máximo 5):</b></label>
+	<center><label for="num"><b>Número de computadores a usar (Máximo 5)</b></label></center>
     <br></br>
+    <center>
     <input type="number" placeholder="Escriba el numero de pcs a usar" min="1" max="5" name="numero" id ="numero"<?php echo $numero; ?>></input>
+    </center>
     <br></br>
     
     <div style="text-align: center">
