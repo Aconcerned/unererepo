@@ -15,20 +15,22 @@ body {
 }
 
 form {
-    border: 3px solid #f1f1f1
+    border: 3px solid lightgray;
+    margin: 0 auto; 
+    width: 400px;
 }
 
-input[type=date],
 input[type=number],
-input[type=text],
-input[type=time], select {
-    width: 20%;
+input[type=time],
+select {
+    width: 250px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 3px solid #000;
     box-sizing: border-box
 }
+
 
 input[type=submit] {
     padding: 14px 20px;
@@ -38,7 +40,7 @@ input[type=submit] {
 
 input[type=button] {
     padding: 14px 20px;
-    width: 95 px;
+    width: 100 px;
     box-align: middle
 }
 
