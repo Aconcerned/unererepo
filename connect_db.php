@@ -1,7 +1,7 @@
 <?php
 // Iniciar variables
-use PHPMailer\PHPMailer\PHPMailer; //No quites esto
-use PHPMailer\PHPMailer\Exception; //No quites esto
+use PHPMailer\PHPMailer\PHPMailer; //No quites esto, o los emails no funcionaran
+use PHPMailer\PHPMailer\Exception; //No quites esto, o los emails no funcionaran
 
 require 'PHPMailer-6.0.5/src/Exception.php'; //Permite obtener los errores del mailer
 require 'PHPMailer-6.0.5/src/PHPMailer.php'; //Codigo del mailer en si
@@ -81,9 +81,9 @@ if (isset($_POST['submit'])) {
     $mail->Port       = 587;                   // set the SMTP port for the GMAIL server
     $mail->Username   = "mailboyforone2@gmail.com";  // GMAIL nombre, nota: debes permitirle al servidor de que permita aplicaciones de otras procedencias, si no no te va a dejar
     $mail->Password   = "hellotheregeneralkenobi";            // GMAIL clave
-	$mail->SMTPDebug = 0;
+   	$mail->SMTPDebug = 0;
 	
-	    $mail->From = "mailboyforone2@gmail.com";
+	     $mail->From = "mailboyforone2@gmail.com";
         $mail->FromName = "Hola";
         $mail->AddAddress($_POST['email']);
         $mail->AddReplyTo("mailboyforone2@gmail.com", "Hola");
@@ -93,7 +93,7 @@ if (isset($_POST['submit'])) {
         //Mandar mail
         if (!$mail->Send())
         {
-          $res2 = "Hubo un error mandando el mensaje:" . $mail->ErrorInfo;
+          $res2 = "Ocurrió un error mandando el correo:" . $mail->ErrorInfo;
           echo "<script type='text/javascript'>alert('$res2');
           window.location.href='javascript:history.go(-1)';
           </script>";

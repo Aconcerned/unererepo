@@ -18,22 +18,32 @@ function date_time(id)
         d = date.getDate();
         day = date.getDay();
         days = new Array('Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado');
-        h = date.getHours();
+        h = date.getHours() -1;
+        var session = "AM";
+
         if(h<10) <!-- Si la hora es menor a 10, se le anade un 0 a la izquierda -->
         {
                 h = "0"+h;
         }
+
+        if(h >= 12 && session=="AM"){
+        h = h - 11;
+        session = "PM";
+        }
+
         m = date.getMinutes();
         if(m<10) <!-- Si los minutos son menores a 10, se le anade un 0 a la izquierda -->
         {
                 m = "0"+m;
         }
+
         s = date.getSeconds();
         if(s<10) <!-- Si los segundos son menores a 10, se le anade un 0 a la izquierda -->
         {
                 s = "0"+s;
         }
-        result = ''+days[day]+','+' '+d+' '+'de '+months[month]+' '+'del'+' '+year+''+', '+h+':'+m+':'+s;
+
+        result = ''+days[day]+','+' '+d+' '+'de '+months[month]+' '+'del'+' '+year+''+', '+h+':'+m+':'+s+' '+session;
         document.getElementById(id).innerHTML = result;
         setTimeout('date_time("'+id+'");','1000');
         return true;

@@ -8,7 +8,7 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 
 <center><h1>Bienvenido al sistema de reservación para clases en el CDT</h1></center> 
 <center><h2>No ha iniciado sesión, haga click en el boton correspondiente (Login), para poder entrar</h2></center>
-<h3><b>Nota para los profesores:</b> Esta sección de la página web es solo compatible con navegadores que soporten html5, como las versiones mas nuevas de Edge, Chrome, Opera y Firefox. Si intenta usar otro navegador o está desactualizado, tendrá problemas colocando datos como la fecha y la hora</h3>
+<h3><b>Nota para los profesores:</b></h3> Esta sección de la página web es solo compatible con navegadores que soporten html5, como las versiones mas nuevas de Edge, Chrome, Opera y Firefox. Si intenta usar otro navegador o está desactualizado, tendrá problemas colocando datos como la fecha y la hora
 <br></br>
 
 </head>

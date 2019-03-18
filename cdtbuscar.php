@@ -30,7 +30,6 @@ echo '<div style="text-align: center;"><a href="javascript:history.go(-1);">Haga
 		window.location.href='javascript:history.go(-1)';
 	</script>";
 
-	
   }
 
 ?>

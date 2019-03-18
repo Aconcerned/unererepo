@@ -29,7 +29,7 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 <div id="header">
 
 <!-- Muestra el reloj-->
-<iframe src="reloj.php" width="100%" height="48px" name="relojito">
+<iframe src="reloj.php" width="100%" height="40px" name="relojito">
 </iframe>
 
 <!-- Muestra contenido de los archivos php-->
@@ -55,7 +55,7 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 <?php
 	} //Fin el if del codigo php de mas arriba
 	if(@$_SESSION['Cargo']==1){ //Si el usuario inicio sesion, muestra esto usando el cargo
-	echo '<b>Estas dentro del sistema, profesor/profesora</b>';
+	echo '<b>Estas dentro del sistema para profesores</b>';
 	echo '<p class="demo"></p>';
 ?>
 

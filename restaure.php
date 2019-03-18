@@ -69,7 +69,7 @@ function restoreMysqlDB($filePath, $conn)
                 "type" => "success",
                 "message" => "Database Restore Completed Successfully."
             );
-            $res2 = "Se restauro todo correctamente, haga click en aceptar para ser redireccionado";
+            $res2 = "Se restauro todo correctamente, haga click en en el botón para ser redireccionado";
             echo "<script type='text/javascript'>alert('$res2');
             window.location.href='javascript:history.go(-1)';
             </script>";

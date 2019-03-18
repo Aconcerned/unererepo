@@ -5,10 +5,10 @@ $username = "root";
 $password = "";
 $dbname = "prueba";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Problema conectandose: " . mysqli_connect_error());
+$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Falló la conexión: " . mysqli_connect_error());
 // Check connection
 if (mysqli_connect_errno()) {
-	printf("Problema conectandose: %s\n", mysqli_connect_error());
+	printf("Falló la conexión: %s\n", mysqli_connect_error());
 	exit();
 }
 
@@ -20,7 +20,7 @@ if (mysqli_query($conn, $sql)) {
     header('Location: cdtclase.php'); 
     exit;
 } else {
-    echo "Error borrando";
+    echo "Algo salio mal mientras se borraba la fila";
 }
 
 ?>

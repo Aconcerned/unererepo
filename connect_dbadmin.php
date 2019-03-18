@@ -69,9 +69,9 @@ if (isset($_POST['submit'])) {
   	$clave = md5($clave); //Convertir la clave en md5
   	$query = "INSERT INTO usuarios (nombre, clave, email, cedula, Cargo) 
   			  VALUES('$nombre', '$clave', '$email', '$cedula', '2')";
-  echo "<script type='text/javascript'>alert('$res');
-  window.location.href='javascript:history.go(-1)';
-  </script>";
+    echo "<script type='text/javascript'>alert('$res');
+    window.location.href='javascript:history.go(-1)';
+    </script>";
 
   	mysqli_query($db, $query);
 	
@@ -82,19 +82,19 @@ if (isset($_POST['submit'])) {
     $mail->Port       = 587;                   // set the SMTP port for the GMAIL server
     $mail->Username   = "mailboyforone2@gmail.com";  // GMAIL username, nota: debes permitirle al servidor de que permita aplicaciones de otras procedencias, si no no te va a dejar
     $mail->Password   = "hellotheregeneralkenobi";            // GMAIL password
-	$mail->SMTPDebug = 0;
+	  $mail->SMTPDebug = 0;
 	
-	    $mail->From = "mailboyforone2@gmail.com";
+	      $mail->From = "mailboyforone2@gmail.com";
         $mail->FromName = "Hola";
         $mail->AddAddress($_POST['email']);
         $mail->AddReplyTo("mailboyforone2@gmail.com", "Hola");
-        $mail->Subject = 'Se ha registrado exitosamente';
+        $mail->Subject = 'Se ha registrado exitosamente (Email automatizado)';
         $mail->Body = "Usted se ha registrado como administrador en el sistema de reservas de salones de computación de la Universidad Nueva Esparta. Si usted no se ha registrado, ignore éste correo";
 		
         //send mail
         if (!$mail->Send())
         {
-          $res2 = "Hubo un error mandando el mensaje:" . $mail->ErrorInfo;
+          $res2 = "Ocurrió un error mandando el correo:" . $mail->ErrorInfo;
           echo "<script type='text/javascript'>alert('$res2');
           window.location.href='javascript:history.go(-1)';
           </script>";
