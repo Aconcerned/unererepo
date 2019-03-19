@@ -62,10 +62,10 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 </div>
 
 <div id="buscador" name="buscador"> <!-- El buscador -->
-<form method="POST" action="libbuscar.php" style="padding:50px 250px;">
+<form method="POST" action="libbuscar.php" style="padding:50px;">
 
-<h3>Buscar usando el nombre del profesor</h3>
-<center><input type="text" placeholder="Escriba el nombre del profesor" name="niet" id="niet"></center>
+<center><h3>Buscar una reservación usando el nombre del profesor</h3></center>
+<center><input type="text" placeholder="Escriba el nombre" name="niet" id="niet"></center>
 <br></br>
 <center><input type="submit" id="input buscar" name="input buscar"></center>
 
@@ -75,24 +75,6 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 </body>
 </html>
 <script type="text/javascript">
-
-function myFunction() { <!-- Muestra el formulario de borrar filas -->
-	var x = document.getElementById("borrador");
-	var audio = new Audio('audio/mouse.mp3');
-	audio.play();
-    if (confirm("Esta seguro? Si borra la fila, se borrara en la base de datos")) {
-        if (x.style.display === "block") {
-        x.style.display = "none";
-		document.getElementById("borrador").value="Mostrar forma de borrar datos";
-    } else {
-        x.style.display = "block";
-		document.getElementById("borrador").value="Quitar formulario";
-    }
-		
-    } else {
-		x.style.display = "none";   
-    }
-}
 
 function myFunction2() { <!-- Muestra el formulario de busqueda de filas -->
 	var z = document.getElementById("buscador");
