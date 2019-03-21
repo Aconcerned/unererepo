@@ -9,50 +9,43 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 </style>
 
 <script type="text/javascript"> 
-function date_time(id) 
-{
-        date = new Date; <!-- Obtiene el dia -->
-        year = date.getFullYear();
-        month = date.getMonth();
-        months = new Array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
-        d = date.getDate();
-        day = date.getDay();
-        days = new Array('Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado');
-        h = date.getHours() -1;
-        var session = "AM";
+function date_time() {
 
-        if(h<10) <!-- Si la hora es menor a 10, se le anade un 0 a la izquierda -->
-        {
-                h = "0"+h;
-        }
+date = new Date();
+year = date.getFullYear();
 
-        if(h >= 12 && session=="AM"){
-        h = h - 11;
-        session = "PM";
-        }
+month = date.getMonth();
+months = new Array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+d = date.getDate();
+day = date.getDay();
+days = new Array('Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado');
+var session = "AM";
 
-        m = date.getMinutes();
-        if(m<10) <!-- Si los minutos son menores a 10, se le anade un 0 a la izquierda -->
-        {
-                m = "0"+m;
-        }
+h = ("0" + date.getHours()).slice(-2) -1; 
+m = ("0" + date.getMinutes()).slice(-2);
+s = ("0" + date.getSeconds()).slice(-2);
 
-        s = date.getSeconds();
-        if(s<10) <!-- Si los segundos son menores a 10, se le anade un 0 a la izquierda -->
-        {
-                s = "0"+s;
-        }
+if (h >= 12) {
+    h = h - 11;
+    session = "PM";
+}
 
-        result = ''+days[day]+','+' '+d+' '+'de '+months[month]+' '+'del'+' '+year+''+', '+h+':'+m+':'+s+' '+session;
-        document.getElementById(id).innerHTML = result;
-        setTimeout('date_time("'+id+'");','1000');
-        return true;
+result = `${days[day]}, ${d} de ${months[month]} del  ${year},  ${h}:${m}:${s} ${session}`;
+
+
+time  = date.toLocaleString('en-US', { timeZone: 'EST', hour: 'numeric', minute: 'numeric', second: 'numeric',hour12: true });
+result2 = `Hora en UTC-4: ${days[day]}, ${d} de ${months[month]} del  ${year}, ${time}`;
+
+document.getElementById("date_time2").innerText = result2;
+setTimeout(date_time, '1000');
+return true;
 }
 </script>
 </head>
 
 <body>
-	   <center><span id="date_time"></span></center>
+	  
+       <center><span id="date_time2"></span></center>
            <script type="text/javascript">window.onload = date_time('date_time');</script>
 </body>
 </html>
