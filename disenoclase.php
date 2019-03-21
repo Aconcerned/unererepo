@@ -7,7 +7,9 @@ $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"> 
+
 <script type="text/javascript" src="jquery-1.11.1.min.js"></script> <!-- Se comunica con jquery para editar la tabla -->
 <link rel="stylesheet" href="estilos\clase.css"> <!-- El css de la pagina, mas que todo el de la tabla -->
 

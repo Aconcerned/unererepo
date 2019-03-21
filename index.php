@@ -7,6 +7,8 @@
  echo @$_SESSION['nombre']; //Muestra el nombre del usuario
 ?>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
 <head> <!-- Logo, menu, el css, etc -->
 
 <style>

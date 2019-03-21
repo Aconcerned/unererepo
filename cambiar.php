@@ -7,6 +7,8 @@ $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 
 <html>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
 <head>
 
 <meta charset="UTF-8">
@@ -16,7 +18,7 @@ $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 <style>
 body{background-image:url(imagenes/fondo_une.jpg)}
 </style>
-
+<center><h1>Cambiar los datos de los usuarios</h1></center>
 </head>
 
 <body>

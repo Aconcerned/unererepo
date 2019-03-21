@@ -13,6 +13,9 @@ $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 ?>
 
 <html> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
 <head>
 
 <link rel="stylesheet" href="estilos\diseno.css">

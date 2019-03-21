@@ -1,4 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"> <!-- Inicio -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
 <head> <!-- Logo, menu, el css, etc -->
 
 <link rel="stylesheet" href="estilos\login.css">
@@ -27,7 +30,7 @@
   <center><label for="uname"><b>Nombre de usuario</b></label></center>
     
     <center>
-    <input type="text" onKeyPress="isMayus(event)"  placeholder="Escriba su nombre de usuario" name="nombre" id="nombre" required></input>
+    <input type="text" onKeyPress="isMayus(event)"  placeholder="Escriba su nombre" name="nombre" id="nombre" required></input>
     </center>
     
     <br></br>
@@ -37,7 +40,7 @@
     <center><label for="psw"><b>Clave</b></label></center>
     
     <center>
-    <input type="password" onKeyPress="isMayus(event)"  placeholder="Escriba su clave de usuario" name="clave" id="clave" required></input>
+    <input type="password" onKeyPress="isMayus(event)"  placeholder="Escriba su clave" name="clave" id="clave" required></input>
     </center>
     
     <br></br>

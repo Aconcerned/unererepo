@@ -1,8 +1,11 @@
 <?php include('connect_db.php') ?>
 <html> <!-- Inicio -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
 <head> <!-- Logo, menu, el css, etc -->
 
-<link rel="stylesheet" href="estilos\registrar.css">
+<link rel="stylesheet" href="estilos\registrar2.css">
 
 <style>
 
@@ -17,7 +20,7 @@ body {
 <body> <!-- El formulario en si -->
 <br></br>
 <div style="text-align: center;"><a href="registrarpersona.php">Haga click para refrescar</a></div>
-<center><h1>Formulario de Registro</h1></center>
+<center><h1>Formulario de Registro para profesores</h1></center>
 <center><h3>Todos los campos son requeridos</h3></center>
 <h3>Nota: Es sensible a mayúsculas y minúsculas, por favor escriba de manera consistente. Por ejemplo: "hola" no es igual a "HOLA" u "HoLa"</h3>
 
@@ -33,7 +36,7 @@ body {
     <br></br>
     <center><label for="nom"><b>Nombre de usuario</b></label></center>
     <center>
-    <input type="text" onKeyPress="isMayus(event)" placeholder="Escriba su nombre de usuario" name="nombre" id ="nombre" required<?php echo $nombre; ?>"></input>
+    <input type="text" onKeyPress="isMayus(event)" placeholder="Escriba su nombre" name="nombre" id ="nombre" required<?php echo $nombre; ?>"></input>
     </center>
 
     <br></br>
@@ -41,7 +44,7 @@ body {
 
     <center><label for="clav"><b>Clave</b></label></center>
     <center>
-    <input type="password" onKeyPress="isMayus(event)" placeholder="Escriba su clave de usuario" name="clave" id ="clave" required<?php echo $clave; ?>"></input>
+    <input type="password" onKeyPress="isMayus(event)" placeholder="Escriba su clave" name="clave" id ="clave" required<?php echo $clave; ?>"></input>
     </center>
 
     <br></br>
@@ -57,7 +60,7 @@ body {
 
     <center><label for="ced"><b>Cedula de identidad</b></label></center>
     <center>
-    <input type="number" placeholder="Solo números" name="cedula" id ="cedula" required<?php echo $cedula; ?>></input>
+    <input type="number" placeholder="Su cedula sin puntos" name="cedula" id ="cedula" required<?php echo $cedula; ?>></input>
     </center>
 
     <br></br>

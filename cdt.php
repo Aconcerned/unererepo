@@ -11,6 +11,9 @@ $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 
 ?>
 <html> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
 <head>
 <link rel="stylesheet" href="estilos\diseno.css">
 <link rel="stylesheet" href="estilos\clase.css">
@@ -41,8 +44,9 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 
 <form method="POST" action ="cdt.php"/> <!-- El formulario en si -->
     <?php include('errors.php'); ?>
-    <center><label for="nom"><b>Nombre del profesor</b></label></center>
+    <center><h3>Coloque todos los datos pedidos</h3></center>
     <br></br>
+    <center><label for="nom"><b>Nombre</b></label></center>
     <center>
     <input type="text" readonly="readonly" value="<?php echo htmlentities($_SESSION['nombre']); ?>" placeholder="Escriba el nombre del profesor" name="nombre" id ="nombre"<?php echo $nombre; ?> ></input>
     </center>
@@ -51,7 +55,6 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 
    <center><label for="mat"><b>Materia que da</b></label></center>
    <!-- <input type="text" placeholder="Escriba la materia del profesor" name="materia" id ="materia" ></input>-->
-   <br></br>
 
    <center>
    <select name="materia" id="materia" <?php echo $materia; ?>> 
@@ -90,7 +93,6 @@ body{background-image:url(imagenes/fondo_une.jpg)}
    <br></br>
 
    <center><label for="fec"><b>Fecha</b></label></center>
-    <br></br>
     <center>
     <input type="date" name="fecha" min= <?php echo date('Y-m-d');?> id ="fecha" required<?php echo $fecha; ?>"></input>
     </center>
@@ -99,7 +101,6 @@ body{background-image:url(imagenes/fondo_une.jpg)}
     <br></br>
 
 	<center><label for="hor1"><b>Hora a la que empieza</b></label></center>
-    <br></br>
     <center>
     <input type="time" min="08:30" max="16:00" name="fechaemp" id ="fechaemp" required<?php echo $fechaemp; ?>"></input>
     </center>
@@ -108,7 +109,6 @@ body{background-image:url(imagenes/fondo_une.jpg)}
     <br></br>
 
 	<center><label for="hor2"><b>Hora a la que termina</b></label></center>
-    <br></br>
     <center>
     <input type="time" min="09:30" max="17:00" name="fechater" id ="fechater" required<?php echo $fechater; ?>"></input>
     </center>
@@ -117,7 +117,6 @@ body{background-image:url(imagenes/fondo_une.jpg)}
     <br></br>
 
 	<center><label for="num"><b>Número de computadores a usar (Maximo 15)</b></label></center>
-    <br></br>
     <center>
     <input type="number" placeholder="Escriba el numero de pcs a usar" min="1" max="15" name="numero" id ="numero"<?php echo $numero; ?> ></input>
     </center>
