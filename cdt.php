@@ -134,8 +134,8 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 	</form>
 </div>
 
-<div class="container" id="tat" name="tat" style="padding:50px 250px;">
-<h1>Clases actuales en el sistema (Centro de tecnología)</h1>
+<div class="container" id="tat" name="tat">
+<center><h1>Clases actuales en el sistema (Centro de tecnología)</h1></center>
 <table id="employee_grid" name="employee_grid" class="table table-condensed table-hover table-striped bootgrid-table" width="60%" cellspacing="0">
    <thead>
       <tr>

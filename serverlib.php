@@ -41,7 +41,7 @@
     }
 	
 	if(!$error) {
-			$sql = "UPDATE reservalib SET ".$columns[$colcdt]." = '".$colVal."' WHERE id='".$rowId."'";
+			$sql = "UPDATE reservatodo SET ".$columns[$colcdt]." = '".$colVal."' WHERE id='".$rowId."'";
 			$status = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
 			$msg = array('error' => $error, 'msg' => 'Se actualizaron los datos, recargue la pagina para poder verlo');
 	} else {

@@ -46,10 +46,10 @@
     <br></br>
     <br></br>
     
-<input type="submit" id="Entrar" onclick="MyFunction()" value="Entrar"></input>
+<center><input type="submit" id="Entrar" onclick="MyFunction()" value="Entrar"></input></center>
 
 <div class="container" style="background-color:#f1f1f1">
-<button type="Reset" id="reset"  onclick="MyFunction()">Cancelar</button>
+<center><button type="Reset" id="reset"  onclick="MyFunction()">Cancelar</button></center>
  </div>
 
 <script type="text/javascript">

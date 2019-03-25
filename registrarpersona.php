@@ -5,7 +5,7 @@
 
 <head> <!-- Logo, menu, el css, etc -->
 
-<link rel="stylesheet" href="estilos\registrar2.css">
+<link rel="stylesheet" href="estilos\registrar3.css">
 
 <style>
 
@@ -66,12 +66,14 @@ body {
     <br></br>
     <br></br>
 
-    <input type="submit" id="submit" name="submit" value="Registrarse"></input>
+    <center><input type="submit" id="submit" name="submit" value="Registrarse"></input></center>
 
+<center>
 <div class="container" style="background-color:#f1f1f1">
     <button type="Reset" class="floated">Limpiar campos</button>
 </div>
- 
+</center>
+
 </form>
   
 <script>

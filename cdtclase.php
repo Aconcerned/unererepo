@@ -26,7 +26,7 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 <div style="text-align: center;"><a href="cdtclase.php">Haga click para refrescar</a></div> 
 
 <!-- Tabla con los datos de la base de datos -->
-<div class="container" style="padding:50px 250px;">
+<div class="container" id="otra">
 <h1>Clases actuales en el sistema (Centro de tecnología):</h1>
 <h2>Haga click en un campo para editarlo (La fecha de inscripción no es editable)</h2>
 <div id="msg" class="alert"></div> <!-- Da las alertas en connection -->

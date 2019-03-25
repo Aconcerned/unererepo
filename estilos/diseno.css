@@ -17,13 +17,13 @@ body {
 form {
     border: 3px solid lightgray;
     margin: 0 auto; 
-    width: 400px;
+    width: 100%;
 }
 
 input[type=number],
 input[type=time],
 select {
-    width: 250px;
+    width: 300px;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -58,4 +58,21 @@ input[type=button]:hover {
 #formularionuevaclase,
 #tat {
     display: none
+}
+
+@media screen and (max-width:300px) {
+    span.psw {
+    display: block;
+    float: none;
+}
+
+input[type=text], input[type=number], select, input[type=date], input[type=time] {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #000;
+    box-sizing: border-box;
+  } 
+
 }
