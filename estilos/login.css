@@ -57,14 +57,14 @@
       padding-top: 16px;
   }
   
-  @media screen and (max-width:300px) {
+  @media screen and (max-width:800px) {
       span.psw {
       display: block;
       float: none;
   }
   
   input[type=password], input[type=text] {
-    width: 250px;
+    width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;

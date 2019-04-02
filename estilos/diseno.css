@@ -60,7 +60,7 @@ input[type=button]:hover {
     display: none
 }
 
-@media screen and (max-width:300px) {
+@media screen and (max-width:800px) {
     span.psw {
     display: block;
     float: none;
@@ -74,5 +74,25 @@ input[type=text], input[type=number], select, input[type=date], input[type=time]
     border: 3px solid #000;
     box-sizing: border-box;
   } 
+
+  #employee_grid {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#employee_grid td,
+#employee_grid th {
+    border: 1px solid #ddd;
+    padding: 2px
+}
+
+#otra{
+    padding:0px 10px;
+}
+
+#tat{
+    padding:0px 10px;
+}
 
 }

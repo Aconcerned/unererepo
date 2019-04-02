@@ -15,7 +15,7 @@ form {
 #employee_grid {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 300px;
+    width: 100%;
 }
 
 #employee_grid td,
@@ -76,7 +76,7 @@ input[type=submit] {
     display: none
 }
 
-@media screen and (max-width:300px) {
+@media screen and (max-width:800px) {
     span.psw {
     display: block;
     float: none;
@@ -94,7 +94,7 @@ input[type=text], input[type=number], select, input[type=date], input[type=time]
   #employee_grid {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100px;
+    width: 100%;
 }
 
 #employee_grid td,
@@ -104,11 +104,11 @@ input[type=text], input[type=number], select, input[type=date], input[type=time]
 }
 
 #otra{
-    padding:50px 10px;
+    padding:0px 10px;
 }
 
 #tat{
-    padding:50px 10px;
+    padding:0px 10px;
 }
 
 
