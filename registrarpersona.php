@@ -19,11 +19,10 @@ body {
 
 <body> <!-- El formulario en si -->
 <br></br>
-<div style="text-align: center;"><a href="registrarpersona.php">Haga click para refrescar</a></div>
 <center><h1>Formulario de Registro para profesores</h1></center>
 <center><h3>Todos los campos son requeridos</h3></center>
 <h3>Nota: Es sensible a mayúsculas y minúsculas, por favor escriba de manera consistente. Por ejemplo: "hola" no es igual a "HOLA" u "HoLa"</h3>
-
+<div style="text-align: center;"><a href="registrarpersona.php">Haga click para refrescar</a></div>
 <br></br>
 
 <center>

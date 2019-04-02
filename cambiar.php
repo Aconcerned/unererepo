@@ -13,7 +13,7 @@ $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 
 <meta charset="UTF-8">
 <script type="text/javascript" src="jquery-1.11.1.min.js"></script> <!-- Se comunica con jquery para editar la tabla -->
-<link rel="stylesheet" href="estilos\clase.css"> <!-- El css de la pagina, mas que todo el de la tabla -->
+<link rel="stylesheet" href="estilos/clase.css"> <!-- El css de la pagina, mas que todo el de la tabla -->
 
 <style>
 body{background-image:url(imagenes/fondo_une.jpg)}
@@ -26,7 +26,7 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 <div style="text-align: center;"><a href="cambiar.php">Haga click para refrescar</a></div>
 
 
-<div class="container" style="padding:50px 250px;">
+<div class="container" id="otra">
 <center><h1>Usuarios actuales en el sistema (1 es profesor, 2 es administrador)</h1></center>
 <div id="msg" class="alert"></div> <!-- Da las alertas en connection -->
 <table id="employee_grid" name="employee_grid" class="table table-condensed table-hover table-striped bootgrid-table" width="60%" cellspacing="0">

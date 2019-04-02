@@ -17,11 +17,10 @@ body {
 
 <body> <!-- El formulario en si, clonar 3 veces -->
 <br></br>
-<div style="text-align: center;"><a href="registrarpersonaadmin.php">Haga click para refrescar</a></div>
 <center><h1>Formulario de Registro para administradores</h1></center>
 <center><h3>Todos los campos son requeridos</h3></center>
-
 <h3>Nota: Es sensible a mayúsculas y minúsculas, por favor escriba de manera consistente. Por ejemplo: "hola" no es igual a "HOLA" u "HoLa"</h3>
+<div style="text-align: center;"><a href="registrarpersonaadmin.php">Haga click para refrescar</a></div>
 
 <br></br>
 
