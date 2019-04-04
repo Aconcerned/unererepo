@@ -18,12 +18,13 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 </head>
 <body>
 <br></br>
-<div style="text-align: center;"><a href="libclase.php">Haga click para refrescar</a></div>
 
 <div class="container" id="otra">
 <h1>Clases actuales en el sistema (Biblioteca):</h1>
 <h2>Haga click en un campo para editarlo (La fecha de inscripción no es editable)</h2>
 <div id="msg" class="alert"></div>
+<div style="text-align: center;"><a href="libclase.php">Haga click para refrescar</a></div>
+<br></br>
 <div style="text-align: center;"><a href="backup.php" target="_blank">Haga un respaldo en caso de cometer un error (Recomendado)</a></div> 
 <table id="employee_grid" name="employee_grid" class="table table-condensed table-hover table-striped bootgrid-table" width="60%" cellspacing="0">
    <thead>
