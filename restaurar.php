@@ -5,7 +5,44 @@
 <head>
 <link rel="stylesheet" href="estilos\menor.css"> <!-- css de la forma -->
 <style>
-#backup_file,input[type=submit]{width:95 px;background-color:teal}#backup_file{padding:12px 20px;margin:8px 0;display:inline-block;border:1px solid #ccc;box-sizing:border-box}input[type=submit]{padding:14px 20px;border:3px solid #000}body{background-image:url(imagenes/fondo_une.jpg)}
+#backup_file,
+input[type=submit] {
+    width: 95 px;
+    background-color: teal
+}
+
+#backup_file {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box
+}
+
+input[type=submit] {
+    padding: 14px 20px;
+    border: 3px solid #000
+}
+
+body {
+    background-image: url(imagenes/fondo_une.jpg)
+}
+
+@media screen and (max-width:800px) {
+      span.psw {
+      display: block;
+      float: none;
+    }
+  
+  #backup_file {
+    padding: 0px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box
+}
+}
+
 </style>   
 </head>
 
