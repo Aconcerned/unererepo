@@ -70,7 +70,7 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 </div>
 
 <div id="buscador" name="buscador"> <!-- Forma de buscar datos -->
-<form method="POST" action="aulavirtualbuscar.php" style="padding:50px"> <!-- Formulario de buscar datos -->
+<form method="POST" action="aulavirtualbuscar.php"> <!-- Formulario de buscar datos -->
 <center><h3>Buscar una reservación usando el nombre del profesor</h3></center>
 
 <center><input type="text" placeholder="Escriba el nombre" name="niet" id="niet"></center>
