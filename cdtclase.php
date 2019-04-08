@@ -22,7 +22,6 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 
 <body>
 <!-- Refresca la pagina -->
-<br></br>
 
 <!-- Tabla con los datos de la base de datos -->
 <div class="container" id="otra">

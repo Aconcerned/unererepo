@@ -17,7 +17,6 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 
 </head>
 <body>
-<br></br>
 
 <div class="container" id="otra">
 <h1>Clases actuales en el sistema (Biblioteca):</h1>

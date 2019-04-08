@@ -20,7 +20,6 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 
 <body>
 <!-- Refresca la pagina -->
-<br></br>
 
 <!-- Muestra la tabla -->
 <div class="container" id="otra">
