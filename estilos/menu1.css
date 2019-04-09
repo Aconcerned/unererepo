@@ -79,6 +79,7 @@ nav ul li ul li:hover { background: lightseagreen; }
 /* Background color change on Hover */
 nav a:hover { 
 	background-color: lightseagreen; 
+	color:white;
 }
 
 /* Hide Dropdowns by Default
@@ -139,9 +140,9 @@ li > a:only-child:after { content: ''; }
 	/* Stylinf the toggle lable */
 	.toggle {
 		display: block;
-		background-color: #254441;
+		background-color: silver;
 		padding:14px 20px;	
-		color:#FFF;
+		color:black;
 		font-size:17px;
 		text-decoration:none;
 		border:none;
@@ -149,6 +150,7 @@ li > a:only-child:after { content: ''; }
 
 	.toggle:hover {
 		background-color: lightseagreen;
+		color:white;
 	}
 
 	/* Display Dropdown when clicked on Parent Lable */
