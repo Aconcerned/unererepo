@@ -65,7 +65,7 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 </div>
 
 <div id="boton2" style="text-align: center;"> <!-- Muestra la forma de buscar datos -->
-<button onclick="myFunction2()">Mostrar el buscador</button>
+<input type ="button" id="busca" name="busca" align="center" onclick="myFunction2()" value="Mostrar el buscador">
 </div>
 
 <div id="buscador" name="buscador"> <!-- Forma de buscar datos -->
@@ -89,10 +89,10 @@ function myFunction2() { <!-- Muestra el formulario de busqueda de filas -->
 	audio.play();
     if (z.style.display === "block") {
         z.style.display = "none";
-		document.getElementById("buscador").value="Mostrar forma de buscar datos";
+		document.getElementById("busca").value="Mostrar el buscador";
     } else {
         z.style.display = "block";
-		document.getElementById("buscador").value="Quitar formulario";
+		document.getElementById("busca").value="Quitar formulario de busqueda";
     }
 }
 

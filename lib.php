@@ -181,7 +181,7 @@ function Mostrarnuevo() { <!-- Mostrar el formulario -->
 		document.getElementById("nueva").value="Crear nueva clase";
     } else {
         x.style.display = "block";
-		document.getElementById("nueva").value="Quitar formulario";
+		document.getElementById("nueva").value="Quitar formulario de crear clase";
     }
 }
 
@@ -194,7 +194,7 @@ function Mostrarnuevo2() { <!-- Mostrar el formulario de crear clases -->
 		document.getElementById("to").value="Ver clases";
     } else {
         x.style.display = "block";
-		document.getElementById("to").value="Quitar formulario";
+		document.getElementById("to").value="Quitar formulario de busqueda";
     }
 	
 }
