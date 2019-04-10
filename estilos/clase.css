@@ -59,7 +59,7 @@ input[type=text] {
 }
 
 button,
-input[type=submit] {
+input[type=submit], input[type="button"] {
     background-color: teal;
     color: #000;
     padding: 14px 20px;
