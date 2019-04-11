@@ -25,7 +25,7 @@ $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 body{background-image: url("imagenes/fondo_une.jpg")}
 </style>
 
-<center><h1>Hacer reservaciones para el area de diseño<h1/></center>
+<center><h1>Hacer reservaciones para el Area de Diseño<h1/></center>
 </head>
 
 <body> <!-- Carga el script de arriba -->
