@@ -1,7 +1,7 @@
 <?php
 //Archivo de conexion 
 include_once("connection.php");
-$sql = "SELECT * FROM `reservatodo` WHERE salon='CDT' limit 10 ";
+$sql = "SELECT * FROM `reservatodo` WHERE salon='videobeam' limit 10 ";
 $queryRecords = mysqli_query($conn, $sql) or die("Error al buscar");
 ?>
 <!DOCTYPE html>
@@ -25,10 +25,9 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 
 <!-- Tabla con los datos de la base de datos -->
 <div class="container" id="otra">
-<h1>Clases actuales en el sistema (Centro de tecnología)</h1>
-<h2>Haga click en un campo para editarlo (La fecha de inscripción no es editable)</h2>
+<center><h1>Reservaciones hechas para los videobeams</h1></center>
 <div id="msg" class="alert"></div> <!-- Da las alertas en connection -->
-<div style="text-align: center;"><a href="cdtclase.php">Haga click para refrescar</a></div> 
+<div style="text-align: center;"><a href="reservacionvideoedit.php">Haga click para refrescar</a></div> 
 <br></br>
 <div style="text-align: center;"><a href="backup.php" target="_blank">Haga un respaldo en caso de cometer un error (Recomendado)</a></div> 
 <table id="employee_grid" name="employee_grid" class="table table-condensed table-hover table-striped bootgrid-table" width="60%" cellspacing="0">
@@ -39,9 +38,8 @@ body{background-image: url("imagenes/fondo_une.jpg")}
          <th>Fecha de inicio</th>
 		 <th>Hora que empieza</th>
 		 <th>Hora que termina</th>
-		 <th>Número de maquinas a usar</th>
 		 <th>Fecha de inscripción</th>
-		 <th>Borrar</th>
+         <th>Borrar</th>
       </tr>
    </thead>
    <tbody id="_editable_table"> <!-- Usando los datos en connection, se imprimen los datos de uno en uno -->
@@ -52,14 +50,15 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 	  <center><td class="editable-col" contenteditable="true" colcdt='2' oldVal ="<?php echo $res['fecha'];?>"><?php echo $res['fecha'];?></td></center>
 	  <center><td class="editable-col" contenteditable="true" colcdt='3' oldVal ="<?php echo $res['fechaemp'];?>"><?php echo $res['fechaemp'];?></td></center>
 	  <center><td class="editable-col" contenteditable="true" colcdt='4' oldVal ="<?php echo $res['fechater'];?>"><?php echo $res['fechater'];?></td></center>
-	  <center><td class="editable-col" contenteditable="true" colcdt='5' oldVal ="<?php echo $res['numero'];?>"><?php echo $res['numero'];?></td></center>
-	  <center><td class="editable-col" contenteditable="false" colcdt='6' oldVal ="<?php echo $res['fechainscripcion'];?>"><?php echo $res['fechainscripcion'];?></td></center>
-		 <?php
-		 echo "<td><a href='deletecdt.php?id=".$res['id']."'>Borrar</a></td>";
+	  <center><td class="editable-col" contenteditable="false" colcdt='5' oldVal ="<?php echo $res['fechainscripcion'];?>"><?php echo $res['fechainscripcion'];?></td></center>
+	  
+      	 <?php
+		 echo "<td><a href='deletevideo.php?id=".$res['id']."'>Borrar</a></td>";
 		 echo "</tr>";
 		 ?>
 
-	  <?php endforeach;?> <!-- Final del ciclo for-->
+      
+      <?php endforeach;?> <!-- Final del ciclo for-->
    </tbody>
 </table>
 </div>
@@ -70,7 +69,7 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 </div>
 
 <div id="buscador" name="buscador"> <!-- Forma de buscar datos -->
-<form method="POST" action="cdtbuscar.php">
+<form method="POST" action="videobuscar.php">
 <center><h3>Buscar una reservación usando el nombre del profesor</h3></center>
 
 <center><input type="text" placeholder="Escriba el nombre" name="niet" id="niet"></center>
@@ -101,14 +100,14 @@ $(document).ready(function(){ <!-- Permite editar la tabla en si -->
 		data = {};
 		data['val'] = $(this).text();
 		data['id'] = $(this).parent('tr').attr('data-row-id');
-		data['cdtclase'] = $(this).attr('colcdt');
+		data['reservacionvideoedit'] = $(this).attr('colcdt');
 	    if($(this).attr('oldVal') === data['val'])
 		return false;
 
 		$.ajax({   
 				  
 					type: "POST",  
-					url: "servercdt.php",  <!-- Se conecta a este archivo php que contiene alertas y la coneccion -->
+					url: "servervideo.php",  <!-- Se conecta a este archivo php que contiene alertas y la coneccion -->
 					cache:false,  
 					data: data,
 					dataType: "json",				

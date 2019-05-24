@@ -22,7 +22,7 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 <body>
 
 <div class="container" id="otra">
-<h1>Clases actuales en el sistema (Salon de diseño):</h1>
+<h1>Clases actuales en el sistema (Salon de diseño)</h1>
 <h2>Haga click en un campo para editarlo (La fecha de inscripción no es editable)</h2>
 <div id="msg" class="alert"></div> <!-- Da las alertas en connection -->
 <div style="text-align: center;"><a href="disenoclase.php">Haga click para refrescar</a></div>

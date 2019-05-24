@@ -16,7 +16,7 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 </style>
 
 <title>Sistema para reservar CDT, salon de diseño, libreria y aula virtual</title>
-<link rel="stylesheet" href="estilos\menu1.css">
+<link rel="stylesheet" href="estilos\menu2.css">
 
 <center><a href="http://une.edu.ve/" target="_blank">
       <img src="imagenes/banner02.jpg" alt="Universidad Nueva Esparta" height="100" width="100%"/>
@@ -35,14 +35,18 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 </iframe>
 
 <!-- Muestra contenido de los archivos php-->
-<ul class="main-nav">
-  <li><a href="bienvenida.php" target="contenido">Principal</a></li> <!-- Archivo de bienvenida-->
-  <li><a href="registrarpersona.php" target="contenido">Registrarse</a></li> <!-- El registro -->
-  <li><a href="login.php" target="contenido">Login</a></li> <!-- El login -->
-  <li><a href="acercade.php" target="contenido" >Acerca de</a></li> <!-- Informacion del sistema -->
-</ul>
+<nav>
+        <label for="drop" class="toggle">Menu</label>
+        <input type="checkbox" id="drop" />
+            <ul class="menu">
+                <li><a href="bienvenida.php" target="contenido">Principal</a></li>
+                <li><a href="registrarpersona.php" target="contenido">Registrarse</a></li> <!-- El registro -->
+                <li><a href="login.php" target="contenido">Login</a></li> <!-- El login -->
+               <li><a href="acercade.php" target="contenido" >Acerca de</a></li> <!-- Informacion del sistema -->
+            </ul>
+</nav>
 
-<iframe src="bienvenida.php" width="100%" height="669px" name="contenido"> <!-- Muestra los target -->
+<iframe src="bienvenida.php" width="100%" height="100%" name="contenido"> <!-- Muestra los target -->
 </iframe>
 </div>
 
@@ -66,21 +70,38 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 </iframe>
 
 <!-- Muestra contenido de los archivos php-->
-<ul class="main-nav">
-  <li><a href="bienvenida2.php" target="contenido">Principal</a></li> <!-- Archivo de bienvenida-->
-  <li class="dropdown" id="part1"> <!-- Se dividen los reservorios, meter datos-->
-    <a href="javascript:void(0)" class="dropbtn">Reservar salon de...</a>
-    <div class="dropdown-content" id="drop1">
-      <a href="cdt.php" target="contenido">Reservar salon de CDT</a>
-	  <a href="diseno.php" target="contenido">Reservar salon de diseño</a>
-      <a href="lib.php" target="contenido">Reservar biblioteca</a>
-	  <a href="aulavirtual.php" target="contenido">Reservar aula virtual</a>
-    </div>
-	 </li>
-  <li><a href="cerrar.php" target="_top" >Salir</a></li> <!-- Cerrar todo -->
-</ul>
+<nav>
+        <label for="drop" class="toggle">Menu</label>
+        <input type="checkbox" id="drop" />
+            <ul class="menu">
+            <li><a href="bienvenida2.php" target="contenido">Principal</a></li> <!-- Archivo de bienvenida-->
+                <li>
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-1" class="toggle">Reservar salon de...</label>
+                    <a href="#">Reservar salon de...</a>
+                    <input type="checkbox" id="drop-1"/>
+                    <ul>
+                        <li><a class="lel" href="cdt.php" target="contenido">Reservar salon de CDT</a></li>
+                        <li><a class="lel" href="diseno.php" target="contenido">Reservar salon de diseño</a></li>
+                        <li><a class="lel" href="lib.php" target="contenido">Reservar biblioteca</a></li>
+                        <li><a class="lel" href="aulavirtual.php" target="contenido">Reservar aula virtual</a></li>
+                    </ul> 
+                </li>
+                <li>
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-2" class="toggle">Reserva de videobeam...</label>
+                    <a href="#">Reserva de videobeam...</a>
+                    <input type="checkbox" id="drop-2"/>
+                    <ul>
+                        <li><a class="lel" href="reservarvideo.php" target="contenido">Hacer una reserva</a></li>
+                        <li><a class="lel" href="reservacionvideo.php" target="contenido">Ver las reservaciones</a></li>
+                    </ul>
+                </li>
+                <li><a href="cerrar.php" target="_top" >Salir</a></li> <!-- Cerrar todo -->
+            </ul>
+        </nav>
 
-<iframe src="bienvenida2.php" style="background: #FFFFFF;" width="100%" height="700px" name="contenido"> <!-- Muestra los target -->
+<iframe src="bienvenida2.php" style="background: #FFFFFF;" width="100%" height="100%" name="contenido"> <!-- Muestra los target -->
 </iframe>
 </div>
 
@@ -93,25 +114,43 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 
 <iframe src="reloj.php" width="100%" height="48px" name="relojito">
 </iframe>
-<ul class="main-nav">
-  <li><a href="bienvenida3.php" target="contenido">Principal</a></li> <!-- Archivo de bienvenida-->
-	<li class="dropdown" id="part2"> <!-- Se dividen los reservorios, ver y editar datos-->
-	 <a href="javascript:void(0)" class="dropbtn">Ver clases de...</a>
-	 <div class="dropdown-content" id="drop2">
-	  <a href="cdtclase.php" target="contenido">Ver clases del CDT</a>
-	  <a href="disenoclase.php" target="contenido">Ver clases de diseño</a>
-	  <a href="libclase.php" target="contenido">Ver clases de la biblioteca</a>
-	  <a href="aulavirtualclase.php" target="contenido">Ver clases del aula virtual</a>
-     </div>
-    </li>
-  <li><a href="backup.php" target="contenido" >Hacer un backup</a></li> <!-- Hacer un backup -->
-  <li><a href="restaurar.php" target="contenido" >Restaurar base de datos</a></li>
-  <li><a href="registrarpersonaadmin.php" target="contenido">Registrar administrador</a></li> <!-- El registro --> 
-  <li><a href="cambiar.php" target="contenido" >Cambiar un cargo de usuario</a></li> <!-- Cambiar cargos -->
-  <li><a href="cerrar.php" target="_top" >Salir</a></li> <!-- Cerrar todo -->
-</ul>
 
-<iframe src="bienvenida3.php" style="background: #FFFFFF;" width="100%" height="700px" name="contenido"> <!-- Muestra los target -->
+<nav>
+        <label for="drop" class="toggle">Menu</label>
+        <input type="checkbox" id="drop" />
+            <ul class="menu">
+            <li><a href="bienvenida3.php" target="contenido">Principal</a></li> <!-- Archivo de bienvenida-->
+                <li>
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-1" class="toggle">Reservar salon de...</label>
+                    <a href="#">Reserva de salones...</a>
+                    <input type="checkbox" id="drop-1"/>
+                    <ul>
+                        <li><a class="lel" href="cdtclase.php" target="contenido">Ver clases del CDT</a></li>
+                        <li><a class="lel" href="disenoclase.php" target="contenido">Ver clases de diseño</a></li>
+                        <li><a class="lel" href="libclase.php" target="contenido">Ver clases de la biblioteca</a></li>
+                        <li><a class="lel" href="aulavirtualclase.php" target="contenido">Ver clases del aula virtual</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <!-- First Tier Drop Down -->
+                    <label for="drop-2" class="toggle">Reserva de videobeam...</label>
+                    <a href="#">Reserva de videobeam...</a>
+                    <input type="checkbox" id="drop-2"/>
+                    <ul>
+                        <li><a class="lel" href="reservarvideo.php" target="contenido">Hacer una reserva</a></li>
+                        <li><a class="lel" href="reservacionvideoedit.php" target="contenido">Ver las reservaciones</a></li>
+                    </ul>
+                </li>
+                <li><a href="backup.php" target="contenido" >Backup</a></li> <!-- Hacer un backup -->
+                <li><a href="restaurar.php" target="contenido" >Restaurar base de datos</a></li>
+                <li><a href="registrarpersonaadmin.php" target="contenido">Registrar administrador</a></li> <!-- El registro --> 
+                <li><a href="cambiar.php" target="contenido" >Cambiar cargo</a></li> <!-- Cambiar cargos -->
+                <li><a href="cerrar.php" target="_top" >Salir</a></li> <!-- Cerrar todo -->
+            </ul>
+        </nav>
+
+<iframe src="bienvenida3.php" style="background: #FFFFFF;" width="100%" height="100%" name="contenido"> <!-- Muestra los target -->
 </iframe>
 </div>
 

@@ -23,7 +23,7 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 
 <!-- Muestra la tabla -->
 <div class="container" id="otra">
-<h1>Clases actuales en el sistema (Aula virtual):</h1>
+<h1>Clases actuales en el sistema (Aula virtual)</h1>
 <h2>Haga click en un campo para editarlo (La fecha de inscripción no es editable)</h2>
 <div id="msg" class="alert"></div>
 <div style="text-align: center;"><a href="aulavirtualclase.php">Haga click para refrescar</a></div>
