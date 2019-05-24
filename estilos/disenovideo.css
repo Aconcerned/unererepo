@@ -5,7 +5,8 @@ input[type=submit] {
     color: #000;
     margin: 8px 0;
     border: 3px solid #000;
-    cursor: pointer
+    cursor: pointer;
+    width: 250px
 }
 
 body {
@@ -21,8 +22,7 @@ form {
 }
 
 input[type=number],
-input[type=time],
-select {
+input[type=time],input[type=text],input[type=date],select {
     width: 300px;
     padding: 12px 20px;
     margin: 8px 0;
