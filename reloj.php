@@ -23,12 +23,12 @@ day = date.getDay();
 days = new Array('Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado');
 var session = "AM";
 
-h = ("0" + date.getHours()).slice(-2) -1; 
+h = ("0" + date.getHours()).slice(-2); 
 m = ("0" + date.getMinutes()).slice(-2);
 s = ("0" + date.getSeconds()).slice(-2);
 
 if (h >= 12) {
-    h = h - 11;
+    h = 1;
     session = "PM";
 }
 
@@ -38,7 +38,7 @@ result = `${days[day]}, ${d} de ${months[month]} del  ${year},  ${h}:${m}:${s} $
 time  = date.toLocaleString('en-US', { timeZone: 'EST', hour: 'numeric', minute: 'numeric', second: 'numeric',hour12: true });
 result2 = `Hora en UTC-4: ${days[day]}, ${d} de ${months[month]} del  ${year}, ${time}`;
 
-document.getElementById("date_time2").innerText = result2;
+document.getElementById("date_time").innerText = result;
 setTimeout(date_time, '1000');
 return true;
 }
@@ -47,7 +47,7 @@ return true;
 
 <body>
 	  
-       <center><span id="date_time2"></span></center>
+       <center><span id="date_time"></span></center>
            <script type="text/javascript">window.onload = date_time('date_time');</script>
 </body>
 </html>

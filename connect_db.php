@@ -76,17 +76,17 @@ if (isset($_POST['submit'])) {
 	
 	$mail->IsSMTP(); // telling the class to use SMTP
     $mail->SMTPAuth   = true;         // enable SMTP authentication
-    $mail->SMTPSecure = "tls";        // sets the prefix to the servier
-    $mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
-    $mail->Port       = 587;                   // set the SMTP port for the GMAIL server
-    $mail->Username   = "mailboyforone2@gmail.com";  // GMAIL nombre, nota: debes permitirle al servidor de que permita aplicaciones de otras procedencias, si no no te va a dejar
-    $mail->Password   = "hellotheregeneralkenobi";            // GMAIL clave
+    $mail->SMTPSecure = "ssl";        // sets the prefix to the servier
+    $mail->Host       = "smtp.mail.yahoo.com";      // sets GMAIL as the SMTP server
+    $mail->Port       = 465;                   // set the SMTP port for the GMAIL server
+    $mail->Username   = "mailerune@yahoo.com";  // GMAIL nombre, nota: debes permitirle al servidor de que permita aplicaciones de otras procedencias, si no no te va a dejar
+    $mail->Password   = "hellotheregeneral";            // GMAIL clave
    	$mail->SMTPDebug = 0;
 	
-	     $mail->From = "mailboyforone2@gmail.com";
+	     $mail->From = "mailerune@yahoo.com";
         $mail->FromName = "Hola";
         $mail->AddAddress($_POST['email']);
-        $mail->AddReplyTo("mailboyforone2@gmail.com", "Hola");
+        $mail->AddReplyTo("mailerune@yahoo.com", "Hola");
         $mail->Subject = 'Se ha registrado exitosamente (Email automatizado)';
         $mail->Body = "Usted se ha registrado como profesor en el sistema de reservas de salones de computación de la Universidad Nueva Esparta. Si usted no se ha registrado, ignore éste correo";
 		
