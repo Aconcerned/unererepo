@@ -6,7 +6,6 @@ input[type=submit] {
     margin: 8px 0;
     border: 3px solid #000;
     cursor: pointer;
-    width: 250px
 }
 
 body {

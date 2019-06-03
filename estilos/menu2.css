@@ -220,7 +220,7 @@ li > a:only-child:after { content: ''; }
 
 }
 
-@media all and (max-width : 330px) {
+@media all and (max-width : 500px) {
   
 	nav { 
 		margin:0;
@@ -244,12 +244,12 @@ li > a:only-child:after { content: ''; }
 	}
 
 	.lel{
-		background-color: lightgreen;
+		background-color: palegoldenrod;
 	}
 
 	.toggle {
 		display: block;
-		background-color: green;
+		background-color: silver;
 		padding:14px 20px;	
 		color:black;
 		font-size:17px;
