@@ -74,17 +74,6 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 </html>
 <script type="text/javascript">
 
-function myFunction2() { <!-- Muestra el formulario de busqueda de filas -->
-	var z = document.getElementById("buscador");
-	var audio = new Audio('audio/mouse.mp3');
-	audio.play();
-    if (z.style.display === "block") {
-        z.style.display = "none";
-		document.getElementById("busca").value="Mostrar el buscador";
-    } else {
-        z.style.display = "block";
-		document.getElementById("busca").value="Quitar formulario de busqueda";
-    }
-}
+function myFunction2(){var e=document.getElementById("buscador");new Audio("audio/mouse.mp3").play(),"block"===e.style.display?(e.style.display="none",document.getElementById("busca").value="Mostrar el buscador"):(e.style.display="block",document.getElementById("busca").value="Quitar formulario de busqueda")}
 
 </script>

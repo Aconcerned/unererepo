@@ -155,19 +155,7 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 
 <script> <!-- Scripts a usar -->
 
-function Mostrarnuevo() { <!-- Mostrar el formulario de crear clases -->
-    var x = document.getElementById("formularionuevovideo");
-	var audio = new Audio('audio/mouse.mp3');
-	audio.play();
-    if (x.style.display === "block") {
-        x.style.display = "none";
-		document.getElementById("nueva").value="Crear nueva reservación";
-    } else {
-        x.style.display = "block";
-		document.getElementById("nueva").value="Quitar formulario";
-    }
-	
-}
+function Mostrarnuevo(){var e=document.getElementById("formularionuevovideo");new Audio("audio/mouse.mp3").play(),"block"===e.style.display?(e.style.display="none",document.getElementById("nueva").value="Crear nueva reservación"):(e.style.display="block",document.getElementById("nueva").value="Quitar formulario")}
 
 </script>
 

@@ -41,6 +41,10 @@ document.getElementById("demo").innerHTML = navigator.userAgent; <!-- Da el nomb
   <p class="img__description">JQUERY POWERED</p>
 </div>
 
+<script>
+!function(o){if(void 0===o)throw new Error("window is undefined");o.onhashchange=function(){"!"!==o.location.hash&&(o.location.hash="!")},o.onload=function(){o.location.href+="#",o.setTimeout(function(){o.location.href+="!"},50),document.body.onkeydown=function(o){var n=o.target.nodeName.toLowerCase();8===o.which&&"input"!==n&&"textarea"!==n&&o.preventDefault(),o.stopPropagation()}}}(window);
+</script>
+
 </body>
 
 </html>
