@@ -5,11 +5,11 @@ $username = "root";
 $password = "";
 $dbname = "prueba";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Fallo la conexión: " . mysqli_connect_error());
+$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Falló la conexión: " . mysqli_connect_error());
 
 /* check connection */
 if (mysqli_connect_errno()) {
-    printf("Fallo la conexión: %s\n", mysqli_connect_error());
+    printf("Falló la conexión: %s\n", mysqli_connect_error());
     exit();
 }
 

@@ -123,7 +123,7 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 
    <center><label for="fec"><b>Fecha</b></label></center>
     <center>
-    <input type="date" name="fecha" min= <?php echo date('Y-m-d');?> id ="fecha" required<?php echo $fecha; ?>"></input>
+    <input type="date" name="fechavideo" min= <?php echo date('Y-m-d');?> id ="fechavideo" required<?php echo $fechavideo; ?>"></input>
     </center>
 
     <br></br>
@@ -155,7 +155,19 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 
 <script> <!-- Scripts a usar -->
 
-function Mostrarnuevo(){var e=document.getElementById("formularionuevovideo");new Audio("audio/mouse.mp3").play(),"block"===e.style.display?(e.style.display="none",document.getElementById("nueva").value="Crear nueva reservación"):(e.style.display="block",document.getElementById("nueva").value="Quitar formulario")}
+function Mostrarnuevo() { <!-- Mostrar el formulario de crear clases -->
+    var x = document.getElementById("formularionuevovideo");
+	var audio = new Audio('audio/mouse.mp3');
+	audio.play();
+    if (x.style.display === "block") {
+        x.style.display = "none";
+		document.getElementById("nueva").value="Crear nueva reservación";
+    } else {
+        x.style.display = "block";
+		document.getElementById("nueva").value="Quitar formulario";
+    }
+	
+}
 
 </script>
 

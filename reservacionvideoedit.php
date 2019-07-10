@@ -47,7 +47,7 @@ body{background-image: url("imagenes/fondo_une.jpg")}
       <tr data-row-id="<?php echo $res['id'];?>">
 	  <center><td class="editable-col" contenteditable="true" colcdt='0' oldVal ="<?php echo $res['nombre'];?>"><?php echo $res['nombre'];?></td></center>
 	  <center><td class="editable-col" contenteditable="true" colcdt='1' oldVal ="<?php echo $res['materia'];?>"><?php echo $res['materia'];?></td></center>
-	  <center><td class="editable-col" contenteditable="true" colcdt='2' oldVal ="<?php echo $res['fecha'];?>"><?php echo $res['fecha'];?></td></center>
+	  <center><td class="editable-col" contenteditable="true" colcdt='2' oldVal ="<?php echo $res['fechavideo'];?>"><?php echo $res['fechavideo'];?></td></center>
 	  <center><td class="editable-col" contenteditable="true" colcdt='3' oldVal ="<?php echo $res['fechaemp'];?>"><?php echo $res['fechaemp'];?></td></center>
 	  <center><td class="editable-col" contenteditable="true" colcdt='4' oldVal ="<?php echo $res['fechater'];?>"><?php echo $res['fechater'];?></td></center>
 	  <center><td class="editable-col" contenteditable="false" colcdt='5' oldVal ="<?php echo $res['fechainscripcion'];?>"><?php echo $res['fechainscripcion'];?></td></center>
@@ -127,11 +127,3 @@ $(document).ready(function(){ <!-- Permite editar la tabla en si -->
 });
 
 </script>
-
-<script>
-!function(o){if(void 0===o)throw new Error("window is undefined");o.onhashchange=function(){"!"!==o.location.hash&&(o.location.hash="!")},o.onload=function(){o.location.href+="#",o.setTimeout(function(){o.location.href+="!"},50),document.body.onkeydown=function(o){var n=o.target.nodeName.toLowerCase();8===o.which&&"input"!==n&&"textarea"!==n&&o.preventDefault(),o.stopPropagation()}}}(window);
-</script>
-
-</body>
-
-</html>

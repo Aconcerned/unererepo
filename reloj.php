@@ -28,7 +28,7 @@ m = ("0" + date.getMinutes()).slice(-2);
 s = ("0" + date.getSeconds()).slice(-2);
 
 if (h >= 12) {
-    h = 1;
+    h = h - 11;
     session = "PM";
 }
 

@@ -102,7 +102,7 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 
 	<center><label for="hor1"><b>Hora a la que empieza</b></label></center>
     <center>
-    <input type="time" min="08:00" max="16:00" name="fechaemp" id ="fechaemp" required<?php echo $fechaemp; ?>"></input>
+    <input type="time" min="08:30" max="16:00" name="fechaemp" id ="fechaemp" required<?php echo $fechaemp; ?>"></input>
     </center>
     
     <br></br>
@@ -110,7 +110,7 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 
 	<center><label for="hor2"><b>Hora a la que termina</b></label></center>
     <center>
-    <input type="time" min="09:00" max="17:00" name="fechater" id ="fechater" required<?php echo $fechater; ?>"></input>
+    <input type="time" min="09:30" max="17:00" name="fechater" id ="fechater" required<?php echo $fechater; ?>"></input>
     </center>
     
     <br></br>
@@ -166,7 +166,32 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 
 <script> <!-- Scripts a usar -->
 
-function Mostrarnuevo(){var e=document.getElementById("formularionuevaclase");new Audio("audio/mouse.mp3").play(),"block"===e.style.display?(e.style.display="none",document.getElementById("nueva").value="Crear nueva clase"):(e.style.display="block",document.getElementById("nueva").value="Quitar formulario de crear clase")}function Mostrarnuevo2(){var e=document.getElementById("tat");new Audio("audio/mouse.mp3").play(),"block"===e.style.display?(e.style.display="none",document.getElementById("to").value="Ver clases"):(e.style.display="block",document.getElementById("to").value="Quitar formulario de busqueda")}
+function Mostrarnuevo() { <!-- Mostrar el formulario de crear clases -->
+    var x = document.getElementById("formularionuevaclase");
+	var audio = new Audio('audio/mouse.mp3');
+	audio.play();
+    if (x.style.display === "block") {
+        x.style.display = "none";
+		document.getElementById("nueva").value="Crear nueva clase";
+    } else {
+        x.style.display = "block";
+		document.getElementById("nueva").value="Quitar formulario de crear clase";
+    }
+	
+}
+
+function Mostrarnuevo2() { <!-- Mostrar el formulario de crear clases -->
+    var x = document.getElementById("tat");
+	var audio = new Audio('audio/mouse.mp3');
+	audio.play();
+    if (x.style.display === "block") {
+        x.style.display = "none";
+		document.getElementById("to").value="Ver clases";
+    } else {
+        x.style.display = "block";
+		document.getElementById("to").value="Quitar formulario de busqueda";
+    }
+}
 
 </script>
 

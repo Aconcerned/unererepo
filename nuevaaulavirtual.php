@@ -25,7 +25,8 @@ if (isset($_POST['submit'])) {
   $fechater = mysqli_real_escape_string($db, $_POST['fechater']);
   $fechaemp = mysqli_real_escape_string($db, $_POST['fechaemp']);
   $numero = mysqli_real_escape_string($db, $_POST['numero']);
-  $limit = 6;
+  $salon = 'aula_virtual';
+  $limit = '6';
 
   // Muestra los errores si de alguna manera el usuario nego los required
   if (empty($nombre)) { array_push($errors, "El nombre no esta"); }
@@ -50,20 +51,33 @@ if (isset($_POST['submit'])) {
 	  array_push($errors, "La hora a la que comienza la clase y la hora a la que termina la clase no tienen sentido, cambielas");
   }
 
+   //Revisar si hay una clase en exactamente el mismo dia y la misma hora
+   
+   $date_check_query = "SELECT * FROM reservatodo WHERE fecha='$fecha' AND salon='$salon' AND fechaemp='$fechaemp'";
+   $result = mysqli_query($db, $date_check_query);
+   $date = mysqli_fetch_assoc($result);
 
-   $count_query = "SELECT SUM(Conteoaula) FROM reservatodo WHERE fecha='$fecha'AND fechaemp='$fechaemp'";
+   $count_query = "SELECT SUM(Conteocdt) FROM reservatodo WHERE fecha='$fecha' AND salon='aula_virtual' AND fechaemp='$fechaemp'";
    $result2 = mysqli_query($db, $count_query); 
    $conteo =  mysqli_fetch_assoc($result2);
 
-   if($conteo["SUM(Conteoaula)"] >= $limit){
+   if($conteo === $limit AND $fecha === $date['fecha'] AND $date['fechaemp']===$fechaemp){
+   echo ''; 
+   echo 'Algo salio mal';
+   echo '';
+   array_push($errors, "No hay computadores disponibles en esa fecha, intente otra fecha");
+   }
+
+   if($conteo > $limit AND $fecha === $date['fecha'] AND $date['fechaemp']===$fechaemp){
     echo ''; 
     echo 'Algo salio mal';
     echo '';
-    array_push($errors, "No hay computadores disponibles en esa hora, intente otra fecha");
+    array_push($errors, "No hay computadores disponibles en esa fecha, intente otra fecha");
     }
 
+  
   if (count($errors) == 0) {
-  	$query = "INSERT INTO reservatodo(nombre, materia, salon, fecha, fechaemp, fechater, numero, fechainscripcion, Conteoaula) 
+  	$query = "INSERT INTO reservatodo(nombre, materia, salon, fecha, fechaemp, fechater, numero, fechainscripcion, Conteocdt) 
   			  VALUES('$nombre', '$materia', 'aula_virtual', '$fecha', '$fechaemp', '$fechater', '$numero', now(), '$numero')";
   	mysqli_query($db, $query);
 	echo $res;

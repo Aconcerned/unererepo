@@ -5,10 +5,10 @@ $username = "root";
 $password = "";
 $dbname = "prueba";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
+$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Fallo la conexión: " . mysqli_connect_error());
 // Check connection
 if (mysqli_connect_errno()) {
-	printf("Connect failed: %s\n", mysqli_connect_error());
+	printf("Fallo la conexión: %s\n", mysqli_connect_error());
 	exit();
 }
 
@@ -20,7 +20,7 @@ if (mysqli_query($conn, $sql)) {
     header('Location: libclase.php'); 
     exit;
 } else {
-    echo "Error borrando";
+    echo "Algo salio mal mientras se borraba la fila";
 }
 
 ?>

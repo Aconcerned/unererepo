@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
   $fechater = mysqli_real_escape_string($db, $_POST['fechater']);
   $fechaemp = mysqli_real_escape_string($db, $_POST['fechaemp']);
   $numero = mysqli_real_escape_string($db, $_POST['numero']);
-  $limit = 5;
+  $salon = 'diseno';
 
   // Muestra los errores si de alguna manera el usuario nego los required
   if (empty($nombre)) { array_push($errors, "El nombre no esta"); }
@@ -37,33 +37,53 @@ if (isset($_POST['submit'])) {
   
   // Evitar que el usuario meta la hora de comienzo igual de la hora de terminacion
   if($fechaemp === $fechater){
-    echo '';
     echo 'Algo salio mal';
     echo '';
 	  array_push($errors, "Las horas de entrada y salida son iguales, cambielas");
   }
 
   if($fechater < $fechaemp){
-    echo '';
     echo 'Algo salio mal';
     echo '';
 	  array_push($errors, "La hora a la que comienza la clase y la hora a la que termina la clase no tienen sentido, cambielas");
   }
 
-    $count_query = "SELECT SUM(Conteodiseno) FROM reservatodo WHERE fecha='$fecha' AND fechaemp='$fechaemp'";
+   //Revisar si hay una clase en exactamente el mismo dia y la misma hora
+   
+    $date_check_query = "SELECT * FROM reservatodo WHERE fecha='$fecha' AND salon='$salon' LIMIT 1";
+    
+    $result = mysqli_query($db, $date_check_query);
+    $date = mysqli_fetch_assoc($result);
+  
+    if ($date) { // Si ya existe la clase
+      if ($date['fecha'] === $fecha AND $date['salon']===$salon AND $date['fechaemp']===$fechaemp) {
+        echo 'Algo salio mal';
+        array_push($errors, "Ya hay una clase en ese dia y en esa misma hora");
+      }
+    }
+
+    $count_query = "SELECT SUM(Conteo) FROM reservatodo WHERE fecha='$fecha' AND salon='diseno'";
     $result2 = mysqli_query($db, $count_query); 
     $conteo =  mysqli_fetch_assoc($result2);
 
-    if($conteo["SUM(Conteodiseno)"] >= $limit){
+    if($conteo == 5 AND $fecha === $date['fecha']){
       echo ''; 
       echo 'Algo salio mal';
       echo '';
-      array_push($errors, "No hay computadores disponibles en esa hora, intente otra fecha");
+      array_push($errors, "No hay computadores disponibles en esa fecha, intente otra fecha");
       }
+   
+      if($conteo > 5 AND $fecha === $date['fecha']){
+       echo ''; 
+       echo 'Algo salio mal';
+       echo '';
+       array_push($errors, "No hay computadores disponibles en esa fecha, intente otra fecha");
+       }
+   
 
     //Si no hay errores, hace el insertar
   if (count($errors) == 0) {
-  	$query = "INSERT INTO reservatodo(nombre, materia, salon, fecha, fechaemp, fechater, numero, fechainscripcion, Conteodiseno) 
+  	$query = "INSERT INTO reservatodo(nombre, materia, salon, fecha, fechaemp, fechater, numero, fechainscripcion, Conteo) 
   			  VALUES('$nombre', '$materia', 'diseno', '$fecha', '$fechaemp', '$fechater', '$numero', now(), '$numero')";
   	mysqli_query($db, $query);
 	echo $res;

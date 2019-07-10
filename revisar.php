@@ -34,7 +34,7 @@ $count = mysqli_num_rows($result);
 		$_SESSION['id']= $row['id'];
 		$_SESSION['Cargo']=$row['Cargo'];
 		$_SESSION['nombre']=$row['nombre'];
-
+		//header("Location:index.php?id=$id#top"); //Inicia la sesion
         echo "<script type='text/javascript'> top.document.location = 'index.php?id=$id'; </script>";
  }else{
 	$res = "El usuario y/o la clave es incorrecta, presione el boton para reintentar";

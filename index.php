@@ -16,7 +16,7 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 </style>
 
 <title>Sistema para reservar CDT, salon de diseño, libreria y aula virtual</title>
-<link rel="stylesheet" href="estilos\menu2.css">
+<link rel="stylesheet" href="estilos\menu1.css">
 
 <center><a href="http://une.edu.ve/" target="_blank">
       <img src="imagenes/banner02.jpg" alt="Universidad Nueva Esparta" height="100" width="100%"/>
@@ -81,10 +81,10 @@ body{background-image: url("imagenes/fondo_une.jpg")}
                     <a href="#">Reservar salon de...</a>
                     <input type="checkbox" id="drop-1"/>
                     <ul>
-                        <li><a class="lel" href="cdt.php" target="contenido">Reservar salon de CDT</a></li>
-                        <li><a class="lel" href="diseno.php" target="contenido">Reservar salon de diseño</a></li>
-                        <li><a class="lel" href="lib.php" target="contenido">Reservar biblioteca</a></li>
-                        <li><a class="lel" href="aulavirtual.php" target="contenido">Reservar aula virtual</a></li>
+                        <li><a href="cdt.php" target="contenido">Reservar salon de CDT</a></li>
+                        <li><a href="diseno.php" target="contenido">Reservar salon de diseño</a></li>
+                        <li><a href="lib.php" target="contenido">Reservar biblioteca</a></li>
+                        <li><a href="aulavirtual.php" target="contenido">Reservar aula virtual</a></li>
                     </ul> 
                 </li>
                 <li>
@@ -93,8 +93,8 @@ body{background-image: url("imagenes/fondo_une.jpg")}
                     <a href="#">Reserva de videobeam...</a>
                     <input type="checkbox" id="drop-2"/>
                     <ul>
-                        <li><a class="lel" href="reservarvideo.php" target="contenido">Hacer una reserva</a></li>
-                        <li><a class="lel" href="reservacionvideo.php" target="contenido">Ver las reservaciones</a></li>
+                        <li><a href="reservarvideo.php" target="contenido">Hacer una reserva</a></li>
+                        <li><a href="reservacionvideo.php" target="contenido">Ver las reservaciones</a></li>
                     </ul>
                 </li>
                 <li><a href="cerrar.php" target="_top" >Salir</a></li> <!-- Cerrar todo -->
@@ -126,10 +126,10 @@ body{background-image: url("imagenes/fondo_une.jpg")}
                     <a href="#">Reserva de salones...</a>
                     <input type="checkbox" id="drop-1"/>
                     <ul>
-                        <li><a class="lel" href="cdtclase.php" target="contenido">Ver clases del CDT</a></li>
-                        <li><a class="lel" href="disenoclase.php" target="contenido">Ver clases de diseño</a></li>
-                        <li><a class="lel" href="libclase.php" target="contenido">Ver clases de la biblioteca</a></li>
-                        <li><a class="lel" href="aulavirtualclase.php" target="contenido">Ver clases del aula virtual</a></li>
+                        <li><a href="cdtclase.php" target="contenido">Ver clases del CDT</a></li>
+                        <li><a href="disenoclase.php" target="contenido">Ver clases de diseño</a></li>
+                        <li><a href="libclase.php" target="contenido">Ver clases de la biblioteca</a></li>
+                        <li><a href="aulavirtualclase.php" target="contenido">Ver clases del aula virtual</a></li>
                     </ul>
                 </li>
                 <li>
@@ -138,8 +138,8 @@ body{background-image: url("imagenes/fondo_une.jpg")}
                     <a href="#">Reserva de videobeam...</a>
                     <input type="checkbox" id="drop-2"/>
                     <ul>
-                        <li><a class="lel" href="reservarvideo.php" target="contenido">Hacer una reserva</a></li>
-                        <li><a class="lel" href="reservacionvideoedit.php" target="contenido">Ver las reservaciones</a></li>
+                        <li><a href="reservarvideo.php" target="contenido">Hacer una reserva</a></li>
+                        <li><a href="reservacionvideoedit.php" target="contenido">Ver las reservaciones</a></li>
                     </ul>
                 </li>
                 <li><a href="backup.php" target="contenido" >Backup</a></li> <!-- Hacer un backup -->

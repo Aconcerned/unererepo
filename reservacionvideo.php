@@ -45,7 +45,7 @@ body{background-image: url("imagenes/fondo_une.jpg")}
       <tr data-row-id="<?php echo $res['id'];?>">
 	  <center><td class="editable-col" contenteditable="false" colcdt='0' oldVal ="<?php echo $res['nombre'];?>"><?php echo $res['nombre'];?></td></center>
 	  <center><td class="editable-col" contenteditable="false" colcdt='1' oldVal ="<?php echo $res['materia'];?>"><?php echo $res['materia'];?></td></center>
-	  <center><td class="editable-col" contenteditable="false" colcdt='2' oldVal ="<?php echo $res['fecha'];?>"><?php echo $res['fecha'];?></td></center>
+	  <center><td class="editable-col" contenteditable="false" colcdt='2' oldVal ="<?php echo $res['fechavideo'];?>"><?php echo $res['fechavideo'];?></td></center>
 	  <center><td class="editable-col" contenteditable="false" colcdt='3' oldVal ="<?php echo $res['fechaemp'];?>"><?php echo $res['fechaemp'];?></td></center>
 	  <center><td class="editable-col" contenteditable="false" colcdt='4' oldVal ="<?php echo $res['fechater'];?>"><?php echo $res['fechater'];?></td></center>
 	  <center><td class="editable-col" contenteditable="false" colcdt='5' oldVal ="<?php echo $res['fechainscripcion'];?>"><?php echo $res['fechainscripcion'];?></td></center>
@@ -74,6 +74,17 @@ body{background-image: url("imagenes/fondo_une.jpg")}
 </html>
 <script type="text/javascript">
 
-function myFunction2(){var e=document.getElementById("buscador");new Audio("audio/mouse.mp3").play(),"block"===e.style.display?(e.style.display="none",document.getElementById("busca").value="Mostrar el buscador"):(e.style.display="block",document.getElementById("busca").value="Quitar formulario de busqueda")}
+function myFunction2() { <!-- Muestra el formulario de busqueda de filas -->
+	var z = document.getElementById("buscador");
+	var audio = new Audio('audio/mouse.mp3');
+	audio.play();
+    if (z.style.display === "block") {
+        z.style.display = "none";
+		document.getElementById("busca").value="Mostrar el buscador";
+    } else {
+        z.style.display = "block";
+		document.getElementById("busca").value="Quitar formulario de busqueda";
+    }
+}
 
 </script>

@@ -50,16 +50,16 @@ if (isset($_POST['submit'])) {
 	  array_push($errors, "La hora a la que comienza la clase y la hora a la que termina la clase no tienen sentido, cambielas");
   }
 
-  $count_query = "SELECT SUM(Conteocdt) FROM reservatodo WHERE fecha='$fecha' AND fechaemp='$fechaemp'";
-  $result2 = mysqli_query($db, $count_query); 
-  $conteo =  mysqli_fetch_assoc($result2);
-    
-  if($conteo["SUM(Conteocdt)"] >= $limit){
-  echo ''; 
-  echo 'Algo salio mal';
-  echo '';
-  array_push($errors, "No hay computadores disponibles en esa hora, intente otra fecha");
-  }
+   $count_query = "SELECT SUM(Conteocdt) FROM reservatodo WHERE fecha='$fecha' AND fechaemp='$fechaemp'";
+   $result2 = mysqli_query($db, $count_query); 
+   $conteo =  mysqli_fetch_assoc($result2);
+
+   if($conteo <= $limit){
+   echo ''; 
+   echo 'Algo salio mal';
+   echo '';
+   array_push($errors, "No hay computadores disponibles en esa hora, intente otra fecha");
+   }
 
     // Si no hay errores, hace el insertar
   if (count($errors) == 0) {

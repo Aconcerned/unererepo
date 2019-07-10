@@ -5,7 +5,7 @@ $username = "root";
 $password = "";
 $dbname = "prueba";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
+$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Fallo la conexión: " . mysqli_connect_error());
 // revisar conexion
 if (mysqli_connect_errno()) {
 	printf("Fallo la conexión: %s\n", mysqli_connect_error());
@@ -20,7 +20,7 @@ if (mysqli_query($conn, $sql)) {
     header('Location: aulavirtualclase.php');
     exit;
 } else {
-    echo "Error borrando";
+    echo "Algo salio mal mientras se borraba la fila";
 }
 
 ?>

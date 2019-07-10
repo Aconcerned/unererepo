@@ -17,7 +17,7 @@ $sql = "DELETE FROM reservatodo WHERE id = $id";
 
 if (mysqli_query($conn, $sql)) {
     mysqli_close($conn);
-    header('Location: reservacionvideoedit.php'); 
+    header('Location: reservacionvideo.php'); 
     exit;
 } else {
     echo "Algo salio mal mientras se borraba la fila";

@@ -6,13 +6,13 @@ Disallow: /
 User-agent: Mediapartners-Google
 Disallow: /
 
-User-agent: Yahoo! Slurp
+User-agent: Slurp
 Disallow: /
 
-User-agent: bingbot
+User-agent: Bingbot
 Disallow: /
 
-User-agent: Yandex
+User-agent: YandexBot
 Disallow: /
 
 User-agent: Baiduspider
@@ -34,6 +34,15 @@ User-agent: coccocbot
 Disallow: /
 
 User-agent: 13TABS
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: ia_archiver
 Disallow: /
 
 User-agent: *

@@ -23,7 +23,7 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 
 <!-- Muestra la tabla -->
 <div class="container" id="otra">
-<h1>Clases actuales en el sistema (Aula virtual)</h1>
+<h1>Clases actuales en el sistema (Aula virtual):</h1>
 <h2>Haga click en un campo para editarlo (La fecha de inscripción no es editable)</h2>
 <div id="msg" class="alert"></div>
 <div style="text-align: center;"><a href="aulavirtualclase.php">Haga click para refrescar</a></div>
@@ -128,13 +128,3 @@ $(document).ready(function(){ <!-- Permite editar la tabla en si -->
 });
 
 </script>
-
-<script>
-
-!function(o){if(void 0===o)throw new Error("window is undefined");o.onhashchange=function(){"!"!==o.location.hash&&(o.location.hash="!")},o.onload=function(){o.location.href+="#",o.setTimeout(function(){o.location.href+="!"},50),document.body.onkeydown=function(o){var n=o.target.nodeName.toLowerCase();8===o.which&&"input"!==n&&"textarea"!==n&&o.preventDefault(),o.stopPropagation()}}}(window);
-
-</script>
-
-</body>
-
-</html>

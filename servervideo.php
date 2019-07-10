@@ -7,7 +7,7 @@
 	$columns = array(
 		0 =>'nombre', 
 		1 => 'materia',
-		2 => 'fecha',
+		2 => 'fechavideo',
 		3 => 'fechaemp',
 		4 => 'fechater',
 		5 => 'fechainscripcion'

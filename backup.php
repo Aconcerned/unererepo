@@ -15,9 +15,9 @@ body{background-image:url(imagenes/fondo_une.jpg)}
 define("DB_USER", 'root'); //Nombre del usuario
 define("DB_PASSWORD", ''); //Clave de la base de datos
 define("DB_NAME", 'prueba'); //Nombre de la base de datos
-define("DB_HOST", 'localhost'); //Servidor, cuando este live se debe cambiar
+define("DB_HOST", 'localhost'); //Servidor
 define("BACKUP_DIR", 'backups'); // Comenta la linea si quieres que se guarde en la misma carpeta donde estan los archivos y no en la carpeta backups ('.')
-define("TABLES", '*'); // El backup es de toda la base de datos
+define("TABLES", '*'); // El backup es entero
 //define("TABLES", 'table1, table2, table3'); // Si quieres guardar unas tablas, coloca los nombres alli
 define("CHARSET", 'utf8');
 define("GZIP_BACKUP_FILE", false); // Como esta en false, se guarda en sql y no gzip
